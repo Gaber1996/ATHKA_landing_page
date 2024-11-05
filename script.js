@@ -75,7 +75,7 @@ entries.forEach(entry => {
         observer.unobserve(entry.target); // Stop observing once the animation is applied
     }
 });
-}, { threshold: 0.5 }); // 20% of the section should be visible to trigger animation
+}, { threshold: 0.3 }); // 20% of the section should be visible to trigger animation
 
 sections.forEach(section => {
 observer.observe(section);
