@@ -1,4 +1,4 @@
-const animatedContentHeaderList = ["Web & Mobile App Development", "UI/UX Design ","Data Analytics & Insights ","Data Scraping ","Data Cleaning ","Machine Learning & Predictive Modeling ","Statistical Analysis ","Automation Solutions "];
+const animatedContentHeaderList = ["تطوير تطبيقات الويب والموبايل", "تصميم واجهات وتجربة المستخدم (UI/UX) ","تحليل البيانات واستخلاص الرؤى ","دراسات السوق وتحليل الأعمال","الاستشارات البرمجية وضمان الجودة ","حلول المدن الذكية وإنترنت الأشياء (IoT): ","تطوير تجارب الواقع المعزز (AR) والواقع الافتراضي (VR) والميتافيرس ","حلول الأتمتة:"];
 const element = document.getElementById("animatedText"); // The HTML element to display the text
 let wordIndex = 0; // Index of the current word
 let letterIndex = 0; // Index of the current letter within the word
@@ -75,7 +75,7 @@ entries.forEach(entry => {
         observer.unobserve(entry.target); // Stop observing once the animation is applied
     }
 });
-}, { threshold: 0.2 }); // 20% of the section should be visible to trigger animation
+}, { threshold: 0.3 }); // 20% of the section should be visible to trigger animation
 
 sections.forEach(section => {
 observer.observe(section);
@@ -85,6 +85,4 @@ observer.observe(section);
 
 // Start the typewriter effect
 type();
-
-
 
