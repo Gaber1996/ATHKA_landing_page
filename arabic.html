@@ -6,41 +6,68 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&family=Cairo:wght@200..1000&family=Lalezar&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATHKA Landind Page</title>
     <link rel="icon" href="Assets/test.PNG" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lalezar&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
         integrity="sha384-o5oHOm0gYZTllT8VjoCdqGTVJrMsaZ6hk1DdeO8T3VxNUUe9PltVxhwH9gXs5vbN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
-
-    
         rel="stylesheet">
 
     <style>
         * {
-            
-  font-family: "Cairo", sans-serif;
-  font-optical-sizing: auto;
-  
-
+            font-family: "Beiruti", sans-serif , 'roboto';
         }
 
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 250px;
             width: 100%;
+        }
+
+
+        .accordion-button {
+            background-color: rgba(8, 30, 77, 1) !important;
+            border: none;
+            color: rgba(128, 240, 255, 255)
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(128, 240, 255, 255);
+            /* Blue or any color you prefer */
+            color: rgba(128, 240, 255, 255);
+            /* Adjust text color if needed */
+        }
+
+
+
+
+        /* Transparent accordion body */
+        .accordion-body {
+            background-color: rgba(8, 30, 77, 1) !important;
+            color: white;
+        }
+
+        /* Optionally make the border transparent too */
+        .accordion-item {
+            border: none;
+            color: white;
         }
 
         .card:hover {
@@ -58,16 +85,27 @@
         }
 
         .card-img-top {
-            width: 100%; /* Makes image responsive to card width */
-            height: 200px; /* Set desired fixed height */
-            object-fit: cover; /* Crop and cover image to fit */
+            width: 100%;
+            /* Makes image responsive to card width */
+            height: 200px;
+            /* Set desired fixed height */
+            object-fit: cover;
+            /* Crop and cover image to fit */
         }
 
         .image-container {
             position: relative;
             text-align: center;
             color: white;
+
         }
+
+        .image-container2 {
+            position: relative;
+
+            color: white;
+        }
+
 
         .overlay-text {
             position: absolute;
@@ -76,13 +114,31 @@
             left: 50%;
             /* Centers the text horizontally */
             transform: translate(-50%, -50%);
-            font-size:medium;
+            font-size: 2vw;
             /* Adjust font size as needed */
-            background: rgba(0, 0, 0, 0.5);
+
             /* Optional: Semi-transparent background */
             padding: 10px 20px;
             border-radius: 5px;
+
         }
+
+        .overlay-text2 {
+            position: absolute;
+            top: 50%;
+            /* Centers the text vertically */
+            left: 58%;
+            /* Centers the text horizontally */
+            transform: translate(-50%, -50%);
+            font-size: 1vw;
+            /* Adjust font size as needed */
+
+            /* Optional: Semi-transparent background */
+            padding: 10px 20px;
+            border-radius: 5px;
+
+        }
+
 
         /* When the section becomes visible, apply the fade-in effect */
         .section.show {
@@ -93,15 +149,18 @@
 
 
         body {
-            background-color: rgba(8, 30, 77, 1);
-            ;
+            /* background-color: rgba(8, 30, 77, 1); */
+
+            background-image: url('./Assets/background.png');
+
             /* Background color */
             color: white;
             /* Default text color */
-
-            
-           
- 
+            background-size: cover;
+            background-position: center center;
+            /* background-attachment: fixed; */
+            background-repeat: no-repeat;
+            min-height: 100vh;
 
         }
 
@@ -121,7 +180,7 @@
             /* Hover color */
         }
 
-        .values .card{
+        .values .card {
             height: 350px;
             width: 100%;
 
@@ -164,7 +223,7 @@
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(5, 23, 62, 255);
             /* Footer background */
             color: #fff;
             /* Footer text color */
@@ -202,68 +261,74 @@
 
 <body>
 
-    <header dir="rtl" class="container-fluid mg-5 fixed-top" style="background-color: rgba(2,6,15,255);">
+    <header class="container-fluid  " style="background-color: rgba(5,23,62,255);">
         <!-- Bootstrap Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark   "
-            style="background-color: rgba(2,6,15,255);">
-            <div class="container-fluid">
-                <!-- Logo Image -->
+        <nav class="navbar navbar-expand-xl navbar-dark " style="background-color: rgba(5,23,62,255);">
 
-                <img src="Assets/test.PNG" alt="Logo" width="45" height="45" class="d-inline-block align-text-top">
-                <span class="fs-5 pe-3" style="color: rgba(104,209,223,255);">أذكي دو</span>
+            <!-- Logo Image -->
 
-
-                <!-- Toggle button for mobile view -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Navbar Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 pb-3 " style="color: rgba(104,209,223,255);"
-                                href="#about">نبذة عامة</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  me-5 " style="color: rgba(104,209,223,255);" href="#services">خدماتنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#values">قيمنا</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);"
-                                href="#achievment">أثرنا وإنجازاتنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#process">مسارنا </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#contact">تواصل معنا</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);"
-                                href="index.html">English</a>
-                        </li>
+            <img src="Assets/test.PNG" alt="Logo" width="45" height="45"
+                class="d-inline-block align-text-top img-fluid">
+            <span class="fs-5 pe-3" style="color: rgba(104,209,223,255);">أذكي دو</span>
 
 
-                    </ul>
-                </div>
+            <!-- Toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item  me-5">
+                        <a class="nav-link active" style="color: rgba(104,209,223,255);" href="#about">نبذة عنا</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link  me-5   " style="color: rgba(104,209,223,255);" href="#services">خدماتنا</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);" href="#values">قيمنا</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);"
+                            href="#vision">رؤيتنا</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#achievment">أثرنا
+                            وانجازاتنا</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);"
+                            href="#process">عملياتنا</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);" href="#contact">تواصل
+                            معنا</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);"
+                            href="index.html">English</a>
+                    </li>
+
+
+                </ul>
             </div>
+
         </nav>
     </header>
 
-    
-    <div class="row image-container">
-        <img src="Assets/scott-graham-5fNmWej4tAA-unsplash.jpg" class="img-fluid" alt="">
 
-        <div class="overlay-text ">
-            <h1 class="fw-bold " style="color: rgba(104,209,223,255);">وكالة الحلول الرقمية في المملكة العربية السعودية
+    <div class="row image-container">
+        <img src="Assets/Frame 11 (1).png" class="img-fluid" alt="">
+
+        <div class="overlay-text">
+            <h1 class="fw-bold" style="color: white; font-family: unna ;">شركة للحلول الرقمية في المملكة العربية
+                السعودية
             </h1>
             <div class="pb-3">
-                <p class="lead fw-bold" id="animatedText"></p>
+                <p class="" id="animatedText"></p>
             </div>
         </div>
 
@@ -289,18 +354,16 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 style="color: rgba(104,209,223,255) ; " class="fw-bold pb-3">نبذة عامة</h2>
-                    <h3>تحويل الأفكار إلى حلول برمجية وبيانات تُحدث تأثيرًا</h3>
-                    <p>أذكي دُو، ومقرها المملكة العربية السعودية، تدعم الشركات الخليجية بحلول برمجية وبيانات مخصصة. بفضل خبرتنا المحلية وشغفنا بالابتكار، نحول أفكارك إلى حلول تقنية مؤثرة وكاملة – مصممة خصيصًا لتلبي احتياجاتك من البداية إلى النهاية.
-
-
+                    <h2 style="color: rgba(104,209,223,255) ; font-family: unna; " class="fw-bold pb-3">نبذة عامة</h2>
+                    <p>نحن شركة أذكى التطويرية لتقنية المعلومات رائدين في مجال تقنية المعلومات والابتكار التكنولوجي،
+                        لتمكين المنشآت والأفراد لمواكبة التحول الرقمي بكفاءة وابتكار. نحن نسعى جاهدين لتحقيق أهداف
+                        عملائنا والتحول الرقمي الذي يطمحون إليه، وذلك من خلال توفير حلول تقنية مبتكرة وخدمات متقدمة تلبي
+                        احتياجاتهم وتساهم في نموهم ونجاحهم في العصر الرقمي.
 
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-fluid"
-                        src="https://pixel-bee.b-cdn.net/wp-content/uploads/2023/11/forex-trade-graph-chart-concept-2.webp"
-                        alt="">
+                    <img class="img-fluid" src="Assets/about us.png" alt="">
                 </div>
 
             </div>
@@ -310,7 +373,7 @@
     <!-- Services Section -->
     <section id="services" class="py-5 section">
         <div class="container text-center">
-            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255);">خدمانتا</h2>
+            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255); font-family: unna;">خدماتنا</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="pb-3">
@@ -333,16 +396,16 @@
 
                     </div>
 
-                    <h4>تصميم واجهات وتجربة المستخدم (UI/UX):</h4>
-                    <p> واجهات جميلة وسهلة الاستخدام تجعل كل تفاعل مع علامتك تجربة ممتعة.</p>
+                    <h4>تصميم واجهات وتجربة المستخدم (UI/UX)</h4>
+                    <p>واجهات جميلة وسهلة الاستخدام تجعل كل تفاعل مع علامتك تجربة ممتعة.</p>
                 </div>
                 <div class="col-md-4">
                     <div class="pb-3">
                         <img src="Assets/data analysis.jpg" class="img-fluid card" alt="">
                     </div>
                     <h4>تحليل البيانات واستخلاص الرؤى</h4>
-                    <p> نحول البيانات الخام إلى رؤى قابلة للتنفيذ:
-                         جمع البيانات - تنظيف البيانات-التعلم الآلي والنماذج التنبؤية-التحليل الإحصائي
+                    <p> نحول البيانات الخام إلى رؤى قابلة للتنفيذ: جمع البيانات - تنظيف البيانات-التعلم الآلي والنماذج
+                        التنبؤية-التحليل الإحصائي
                     </p>
                 </div>
             </div>
@@ -357,11 +420,10 @@
                 </div>
                 <div class="col-md-4">
                     <div class="pb-3">
-                        <img src="Assets/VR.jpg" class="img-fluid card" alt="">
+                        <img src="Assets/man-with-futuristic-device-medium-shot 1.png" class="img-fluid card" alt="">
                     </div>
                     <h4>تطوير تجارب الواقع المعزز (AR) والواقع الافتراضي (VR) والميتافيرس</h4>
                     <p> تحويل أفكارك إلى تجارب رقمية غامرة تشد انتباه المستخدمين.
-
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -369,7 +431,8 @@
                         <img src="Assets/smart cities.jpg" class="img-fluid card" alt="">
                     </div>
                     <h4>حلول المدن الذكية وإنترنت الأشياء (IoT)</h4>
-                    <p>  نساعد في تشكيل مستقبل المدن المتصلة عبر حلول إنترنت الأشياء لتحسين العمليات، وتعزيز الاتصال، ودفع بيئة حضرية أكثر ذكاءً واستدامة
+                    <p> نساعد في تشكيل مستقبل المدن المتصلة عبر حلول إنترنت الأشياء لتحسين العمليات، وتعزيز الاتصال،
+                        ودفع بيئة حضرية أكثر ذكاءً واستدامة
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -378,7 +441,8 @@
 
                     </div>
                     <h4>دراسات السوق وتحليل الأعمال</h4>
-                    <p> تحليل عميق لاتجاهات الصناعة ورؤى السوق لتحسين استراتيجياتك والبقاء في المنافسة.                    </p>
+                    <p> تحليل عميق لاتجاهات الصناعة ورؤى السوق لتحسين استراتيجياتك والبقاء في المنافسة.
+                    </p>
                 </div>
 
                 <div class="col-md-4">
@@ -386,9 +450,8 @@
                         <img src="Assets/Software Consulting & Quality Assurance.jpg" class="img-fluid card" alt="">
                     </div>
                     <h4>الاستشارات البرمجية وضمان الجودة</h4>
-                    <p> شريكك التقني للإرشاد الاستراتيجي والاختبار الصارم لضمان أداء موثوق وسلس.
-                        كل حل نقدمه مصمم بأعلى معايير الأمان والخصوصية، متوافق تماماً مع اللوائح المحلية، ومبني على الثقة
-                        
+                    <p> شريكك التقني للإرشاد الاستراتيجي والاختبار الصارم لضمان أداء موثوق وسلس. كل حل نقدمه مصمم بأعلى
+                        معايير الأمان والخصوصية، متوافق تماماً مع اللوائح المحلية، ومبني على الثقة
                     </p>
                 </div>
 
@@ -397,23 +460,28 @@
 
         </div>
     </section>
-     <!-- our mission section -->
-    
-     <div class="row image-container" >
-        <img src="Assets/mission5.jpg" class="img-fluid" alt="">
+    <!-- our mission section -->
+
+    <div class="row image-container">
+        <img src="Assets/mission ho.png" class="img-fluid " alt="">
+
 
         <div class="overlay-text">
-            <h1 class="fw-bold " style="color: rgba(104,209,223,255);">رسالتنا
-            </h1>
+
             <div class="pb-3">
-                <h2 style="color: rgba(104,209,223,255);" class="fw-bold">في أذكى دو، رسالتنا بسيطة: </h2>
-                <p>أن نكون شريكك الموثوق في التحول الرقمي، من خلال تقديم حلول موجهة بالبيانات وبرمجيات مخصصة تساعد عملك على الازدهار.
-                   <br> نحن معك في كل خطوة على الطريق.</p>
+                <h1 class="fw-bold " style="color: rgba(104,209,223,255); font-family: unna;">رسالتنا </h1>
+
+
+                <p class="">نسعى إلى تمكين عملائنا من تحقيق أهدافهم من خلال توفير حلول تقنية موثوقة وذات جودة عالية،
+                    بالإضافة إلى المساهمة في تطوير المجتمع والمساعدة في عملية التحول الرقمي.
+
+
+                </p>
             </div>
         </div>
 
     </div>
-        <!-- <div class="row image-container">
+    <!-- <div class="row image-container">
             <img src="Assets/mission5.jpg" class="img-fluid" alt="">
     
             <div class="overlay-text">
@@ -428,40 +496,41 @@
             </div>
     
         </div> -->
-        
+
     <!-- our values section -->
     <section id="values" class="section pt-5 pb-5">
         <div class="container text-center">
-            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255);">قيمنا</h2>
+            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255); font-family: unna;">قيمنا</h2>
 
             <div class="container mt-5">
                 <div id="multiColumnCarousel" class="carousel slide" data-bs-ride="carousel">
-                    
+
                     <!-- Carousel indicators -->
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#multiColumnCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#multiColumnCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true"></button>
                         <button type="button" data-bs-target="#multiColumnCarousel" data-bs-slide-to="1"></button>
                     </div>
-            
+
                     <!-- Carousel inner -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-4 values">
                                     <div class="card" style="background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/accuracy2.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/accuracy2.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>الدقة</h3>
                                             <p>كل تفصيل، كل سطر من الكود، يتم بإتقان.</p>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/innovation.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/innovation.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>الابتكار</h3>
                                             <p> أفكار وتقنيات جديدة تُبقيك في المقدمة.</p>
@@ -470,8 +539,8 @@
                                 </div>
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/Integrity.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/Integrity.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>النزاهة</h3>
                                             <p> نعمل بأمانة وشفافية، ملتزمين بما هو صواب.</p>
@@ -480,42 +549,45 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/Customer-Centricity.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/Customer-Centricity.jpg" class="card-img-top img-fluid"
+                                            alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>تركيز على العميل</h3>
-                                            <p>  أهدافك هي دافعنا؛ نصغي ونتكيف.</p>
+                                            <p> أهدافك هي دافعنا؛ نصغي ونتكيف.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/Excellence.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/Excellence.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>التميز</h3>
                                             <p> من البداية إلى النهاية، نقدم أفضل ما لدينا.</p>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
-            
-                        
+
+
                     </div>
-            
+
                     <!-- Carousel controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#multiColumnCarousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#multiColumnCarousel"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#multiColumnCarousel" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#multiColumnCarousel"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -523,8 +595,30 @@
             </div>
         </div>
     </section>
-   
-   
+
+
+    <section id="vision" class="py-5 pt-5 section ">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="color: rgba(104,209,223,255) ; font-family: unna; " class="fw-bold pb-3">رؤيتنا</h2>
+                    <p>أن نكون نموذجاً يُحتذى به في منطقة الشرق الأوسط من خلال السعي المستمر للابتكار ومواكبة أحدث
+                        التطورات التكنولوجية لتلبية احتياجات عملائها وتحقيق نجاحهم في عصر التقنية والتحول الرقمي.
+                    <h2 style="color: rgba(104,209,223,255) ; font-family: unna; " class="fw-bold pb-3">الاهداف</h2>
+
+                    نهدف إلى تقديم حلول تقنية مبتكرة للجهات الحكومية والخاصة لتحقيق أهدافهم بكفاءة وسلاسة، وذلك من خلال
+                    التركيز على الجودة والكفاءة والتميز في الخدمات المقدمة.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="Assets/vision.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- <section class="py-5 pt-5 section " id="mission">
 
@@ -547,27 +641,27 @@
         </div>
     </section>  -->
     <!-- Achievment section -->
-    <section class="section" id="achievment">
+    <section class="section">
 
-        <div class="container text-center" >
+        <div class="container text-center" id="achievment">
             <div class="row">
-                <h2 class="mb-4 fw-bold" style="color: rgba(104,209,223,255);">أثرنا وإنجازاتنا</h2>
+                <h2 class="mb-4 fw-bold" style="color: rgba(104,209,223,255); font-family: unna;">أثرناوانجازاتنا</h2>
 
                 <div class="col-md-4 achievement">
 
 
-                    <div class="count" data-target="10">0</div>
+                    <div class="count" data-target="10" style="font-family: unna;">0</div>
                     <span class="fs-3 fw-bold" style="color: rgba(104,209,223,255);">عملاء عالميين</span>
-                    <p> شراكة ناجحة مع شركات متنوعة، نوفر لها حلولاً مخصصة تلبي احتياجاتها الرقمية المختلفة.</p>
+                    <p>شراكة ناجحة مع شركات متنوعة، نوفر لها حلولاً مخصصة تلبي احتياجاتها الرقمية المختلفة.</p>
                 </div>
                 <div class="col-md-4 achievement">
-                    <div class="count" data-target="20">0</div>
+                    <div class="count" data-target="20" style="font-family: unna">0</div>
                     <span class="fs-3 fw-bold" style="color: rgba(104,209,223,255);">متخصص موهوب</span>
-                    <p>  فريق من الخبراء الملتزمين يقدمون معرفة عميقة ومهارات متخصصة لكل مشروع.
+                    <p> فريق من الخبراء الملتزمين يقدمون معرفة عميقة ومهارات متخصصة لكل مشروع.
                     </p>
                 </div>
                 <div class="col-md-4 achievement">
-                    <div class="count" data-target="3">0</div>
+                    <div class="count" data-target="3" style="font-family: unna">0</div>
                     <span class="fs-3 fw-bold" style="color: rgba(104,209,223,255);">مناطق مستهدفة</span>
                     <p> توسيع نطاقنا في عدة مناطق، لنشر الابتكار وتقديم حلول تترك أثراً دائمًا.
                     </p>
@@ -582,85 +676,139 @@
     <section class="py-5 pt-5 section" id="process">
         <div class="container pt-5">
             <div class="row">
-                <div >
-                    <h2 style="color: rgba(104,209,223,255) ; " class="fw-bold pb-3">مسارنا</h2>
+                <div>
+                    <h2 style="color: rgba(104,209,223,255) ;font-family: unna; " class="fw-bold pb-3">عملياتنا</h2>
                     <h3> "مسارنا المرن والمدعوم بالبيانات لتحقيق النتائج"
 
                     </h3>
-                    <p> بدمج مبادئ التطوير المرن مع التزامنا بدقة البيانات، تم تصميم عمليتنا لتتوافق مع احتياجات عملك مع التركيز على الجودة:
+                    <p> بدمج مبادئ التطوير المرن مع التزامنا بدقة البيانات، تم تصميم عمليتنا لتتوافق مع احتياجات عملك مع
+                        التركيز على الجودة:
+
                     </p>
                     <p>
                     <div class="row">
-                        <div class="col-6">
-                            <div class="list-group" id="list-tab" role="tablist"
-                                style="background-color: rgba(8, 30, 77, 1);">
-                                <a class="list-group-item list-group-item-action active" id="list-home-list1"
-                                    data-bs-toggle="list" href="#list-home1" role="tab" aria-controls="list-home"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">الاستشارة والتحليل</a>
-                                <a class="list-group-item list-group-item-action" id="list-profile-list2"
-                                    data-bs-toggle="list" href="#list-profile2" role="tab" aria-controls="list-profile"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">تصميم يركز على المستخدم</a>
-                                <a class="list-group-item list-group-item-action" id="list-messages-list3"
-                                    data-bs-toggle="list" href="#list-messages3" role="tab"
-                                    aria-controls="list-messages"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">التطوير ودمج البيانات</a>
-                                <a class="list-group-item list-group-item-action" id="list-settings-list4"
-                                    data-bs-toggle="list" href="#list-settings4" role="tab"
-                                    aria-controls="list-settings"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">ضمان الجودة</a>
-                                <a class="list-group-item list-group-item-action" id="list-settings-list5"
-                                    data-bs-toggle="list" href="#list-settings5" role="tab"
-                                    aria-controls="list-settings"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">التنفيذ والدعم</a>
+                        <div class="col-md-6">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            الاستشارة والتحليل
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            فهم أهدافك وتحديد الاستراتيجيات المناسبة لحلول البرمجيات أو البيانات.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            تصميم يركز على المستخدم
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            تطوير تصاميم سهلة الاستخدام لمنصات البرمجيات والبيانات.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            التطوير ودمج البيانات
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            بناء برمجيات قوية مع دمج بيانات دقيقة لتوفير رؤى فعّالة.
 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsefour"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            ضمان الجودة
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            اختبار البرمجيات والتحقق من دقة البيانات لضمان الأداء الأمثل.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsefive"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            التنفيذ والدعم
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            نشر الحلول بسلاسة وتقديم الدعم المستمر لضمان النجاح المستمر.
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="list-home1" role="tabpanel"
-                                    aria-labelledby="list-home-list1">فهم أهدافك وتحديد الاستراتيجيات المناسبة لحلول البرمجيات أو البيانات.<br>
-                                   </div>
-                                    
-                                <div class="tab-pane fade" id="list-profile2" role="tabpanel"
-                                    aria-labelledby="list-profile-list2"> تطوير تصاميم سهلة الاستخدام لمنصات البرمجيات والبيانات.</div>
-                                <div class="tab-pane fade" id="list-messages3" role="tabpanel"
-                                    aria-labelledby="list-messages-list3">بناء برمجيات قوية مع دمج بيانات دقيقة لتوفير رؤى فعّالة.</div>
-                                <div class="tab-pane fade" id="list-settings4" role="tabpanel"
-                                    aria-labelledby="list-settings-list4">اختبار البرمجيات والتحقق من دقة البيانات لضمان الأداء الأمثل. </div>
-                                <div class="tab-pane fade" id="list-settings5" role="tabpanel"
-                                    aria-labelledby="list-settings-list5">   نشر الحلول بسلاسة وتقديم الدعم المستمر لضمان النجاح المستمر.</div>
-                                    <br>
-                                    <img src="Assets/process final.jpg" class="img-fluid d-none d-md-block" alt="" style="height: fit-content; width: fit-content;">
-
-
-                            </div>
+                        <div class="col-md-6 pt-2">
+                            <img src="Assets/process ho.png" class="img-fluid  d-md-block" alt=""
+                                style="height: fit-content; width: fit-content;">
                         </div>
                     </div>
                     </p>
                     </span>
                 </div>
-               
+
 
             </div>
         </div>
     </section>
     <!-- Call to action -->
 
-    <section class="py-5 pt-5 section " id="calltoaction">
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col">
-                    <h2 style="color: rgba(104,209,223,255) ; " class="fw-bold">دعونا نحوّل عملك إلى نجاح! </h2>
+    <div class="row image-container">
+        <img src="Assets/B.png" class="img-fluid " alt="">
 
-                    <p>
-                        تواصل معنا لنكتشف كيف يمكن لـ أذكى دو مساعدتك في تحقيق أهدافك الرقمية بحلول مصممة خصيصاً للسوق الخليجي. نحن هنا لدعم رؤيتك في كل خطوة! </p>
-                    </span>
-                </div>
+        <div class="overlay-text">
 
+            <div class="">
+                <h2 style="color: rgba(104,209,223,255); font-family: unna;" class="fw-bold  pt-3">دعونا نحوّل عملك إلى
+                    نجاح! </h2>
+                <p class="">
+                    انضموا إلى شركة أذكى التطويرية لانطلاقه للمستقبل واستعدوا للابتكار والتميز في عالم التحول الرقمي.
+                    <br> اتصلوا بنا الآن للحصول على فرصة للتعاون وتحقيق نجاحكم المستقبلي.
 
+                </p>
             </div>
         </div>
-    </section>
+
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <hr>
+    </div>
+
 
 
 
@@ -670,11 +818,11 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5 section">
         <div class="container">
-            <h2 class="text-center pb-5" style="color: rgba(104,209,223,255);">تواصل معنا</h2>
+            <h2 class="text-center pb-5" style="color: rgba(104,209,223,255); font-family: unna;">تواصل معنا</h2>
 
             <div>
                 <div class="row">
-                    <div class="mb-3 col-6">
+                    <div class="mb-3 col-md-12">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-telephone-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -689,7 +837,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="mb-3 col-6">
+                    <div class="mb-3 col-md-12">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-envelope-arrow-up-fill" viewBox="0 0 16 16">
                             <path
@@ -698,7 +846,7 @@
                                 d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-5.354 1.25 1.25a.5.5 0 0 1-.708.708L13 12.207V14a.5.5 0 0 1-1 0v-1.717l-.28.305a.5.5 0 0 1-.737-.676l1.149-1.25a.5.5 0 0 1 .722-.016" />
                         </svg>
                         <div class="d-inline-block">
-                            البريد الألكتروني :
+                            البريد الإلكتروني :
                         </div>
                         <span>info@athkado.com</span>
                     </div>
@@ -709,14 +857,14 @@
 
                 <div class="row">
 
-                    <div class="mb-3 col-6">
+                    <div class="mb-3 col-md-12">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                             <path
                                 d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                         </svg>
                         <div class="d-inline-block">
-                            المكتتب :
+                            المكتب :
                         </div>
                         <span> شارع الخليج، حي الزهور، الدمام، المملكة العربية السعودية</span>
                     </div>
@@ -733,9 +881,9 @@
 
 
     <!-- Footer -->
-    <footer class="text-center py-4" dir="ltr">
+    <footer class="text-center py-4">
         <div class="container">
-            <p>&copy; 2024 ATHKA IT Solutions. All rights reserved.</p>
+            <p dir="ltr">&copy; 2024 ATHKA IT Solutions. All rights reserved.</p>
         </div>
     </footer>
 
@@ -743,13 +891,15 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-QVf0MJL42ZvoZkn0Jr/SQErFsDJmrZEvjtOz/Q7hbd60izICW5npeIzfSy6HeNeJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-QVf0MJL42ZvoZkn0Jr/SQErFsDJmrZEvjtOz/Q7hbd60izICW5npeIzfSy6HeNeJ"
+        crossorigin="anonymous"></script>
 
     <!-- Custom script (if any) -->
     <script src="arabicScript.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 

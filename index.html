@@ -11,14 +11,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATHKA Landind Page</title>
     <link rel="icon" href="Assets/test.PNG" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Lalezar&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
         integrity="sha384-o5oHOm0gYZTllT8VjoCdqGTVJrMsaZ6hk1DdeO8T3VxNUUe9PltVxhwH9gXs5vbN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
-
-    
         rel="stylesheet">
 
     <style>
@@ -30,6 +33,35 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 250px;
             width: 100%;
+        }
+
+
+        .accordion-button {
+            background-color: rgba(8, 30, 77, 1) !important;
+            border: none;
+            color: rgba(128, 240, 255, 255)
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(128, 240, 255, 255);
+            /* Blue or any color you prefer */
+            color: rgba(128, 240, 255, 255);
+            /* Adjust text color if needed */
+        }
+
+
+
+
+        /* Transparent accordion body */
+        .accordion-body {
+            background-color: rgba(8, 30, 77, 1) !important;
+            color: white;
+        }
+
+        /* Optionally make the border transparent too */
+        .accordion-item {
+            border: none;
+            color: white;
         }
 
         .card:hover {
@@ -47,16 +79,27 @@
         }
 
         .card-img-top {
-            width: 100%; /* Makes image responsive to card width */
-            height: 200px; /* Set desired fixed height */
-            object-fit: cover; /* Crop and cover image to fit */
+            width: 100%;
+            /* Makes image responsive to card width */
+            height: 200px;
+            /* Set desired fixed height */
+            object-fit: cover;
+            /* Crop and cover image to fit */
         }
 
         .image-container {
             position: relative;
             text-align: center;
             color: white;
+
         }
+
+        .image-container2 {
+            position: relative;
+
+            color: white;
+        }
+
 
         .overlay-text {
             position: absolute;
@@ -65,13 +108,31 @@
             left: 50%;
             /* Centers the text horizontally */
             transform: translate(-50%, -50%);
-            font-size:medium;
+            font-size: 2vw;
             /* Adjust font size as needed */
-            background: rgba(0, 0, 0, 0.5);
+
             /* Optional: Semi-transparent background */
             padding: 10px 20px;
             border-radius: 5px;
+
         }
+
+        .overlay-text2 {
+            position: absolute;
+            top: 50%;
+            /* Centers the text vertically */
+            left: 58%;
+            /* Centers the text horizontally */
+            transform: translate(-50%, -50%);
+            font-size: 1vw;
+            /* Adjust font size as needed */
+
+            /* Optional: Semi-transparent background */
+            padding: 10px 20px;
+            border-radius: 5px;
+
+        }
+
 
         /* When the section becomes visible, apply the fade-in effect */
         .section.show {
@@ -82,11 +143,18 @@
 
 
         body {
-            background-color: rgba(8, 30, 77, 1);
-            ;
+            /* background-color: rgba(8, 30, 77, 1); */
+
+            background-image: url('./Assets/bg.png');
+
             /* Background color */
             color: white;
             /* Default text color */
+            background-size: cover;
+            background-position: center center;
+            /* background-attachment: fixed; */
+            background-repeat: no-repeat;
+            min-height: 100vh;
 
         }
 
@@ -106,7 +174,7 @@
             /* Hover color */
         }
 
-        .values .card{
+        .values .card {
             height: 350px;
             width: 100%;
 
@@ -149,7 +217,7 @@
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(5, 23, 62, 255);
             /* Footer background */
             color: #fff;
             /* Footer text color */
@@ -187,73 +255,76 @@
 
 <body>
 
-    <header class="container-fluid mg-5 fixed-top" style="background-color: rgba(2,6,15,255);">
+    <header class="container-fluid  " style="background-color: rgba(5,23,62,255);">
         <!-- Bootstrap Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark   "
-            style="background-color: rgba(2,6,15,255);">
-            <div class="container-fluid">
-                <!-- Logo Image -->
+        <nav class="navbar navbar-expand-xl navbar-dark " style="background-color: rgba(5,23,62,255);">
 
-                <img src="Assets/test.PNG" alt="Logo" width="45" height="45" class="d-inline-block align-text-top">
-                <span class="fs-5 pe-3" style="color: rgba(104,209,223,255);">ATHKADO</span>
+            <!-- Logo Image -->
 
-
-                <!-- Toggle button for mobile view -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Navbar Links -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 pb-3 " style="color: rgba(104,209,223,255);"
-                                href="#about">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link  me-5 " style="color: rgba(104,209,223,255);" href="#services">Our
-                                Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#values">Our
-                                Values</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);"
-                                href="#achievment">Our Achievment</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#process">Our
-                                Process</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#contact">Call
-                                Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);"
-                                href="arabic.html">العربية</a>
-                        </li>
+            <img src="Assets/test.PNG" alt="Logo" width="45" height="45"
+                class="d-inline-block align-text-top img-fluid">
+            <span class="fs-5 pe-3" style="color: rgba(104,209,223,255);">ATHKADO</span>
 
 
-                    </ul>
-                </div>
+            <!-- Toggle button for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item  me-5">
+                        <a class="nav-link active" style="color: rgba(104,209,223,255);" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link  me-5   " style="color: rgba(104,209,223,255);" href="#services">Our
+                            Services</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);" href="#values">Our
+                            Values</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);" href="#vision">Our
+                            Vision</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#achievment">Our
+                            Achievment</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5 " style="color: rgba(104,209,223,255);" href="#process">Our
+                            Process</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);" href="#contact">Call
+                            Us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active me-5  " style="color: rgba(104,209,223,255);"
+                            href="arabic.html">العربية</a>
+                    </li>
+
+
+                </ul>
             </div>
+
         </nav>
     </header>
 
-    
+
     <div class="row image-container">
-        <img src="Assets/scott-graham-5fNmWej4tAA-unsplash.jpg" class="img-fluid" alt="">
+        <img src="Assets/Frame 11 (2).png" class="img-fluid" alt="">
 
         <div class="overlay-text">
-            <h1 class="fw-bold " style="color: rgba(104,209,223,255);">Digital Solution Agency in Saudi
+            <h1 class="fw-bold" style="color: white; font-family: unna ;">Digital Solution Company in Saudi
                 Arabia
             </h1>
             <div class="pb-3">
-                <p class="lead fw-bold" id="animatedText"></p>
+                <p class="" id="animatedText"></p>
             </div>
         </div>
 
@@ -279,18 +350,14 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 style="color: rgba(104,209,223,255) ; " class="fw-bold pb-3">About Us</h2>
+                    <h2 style="color: rgba(104,209,223,255) ; font-family: unna; " class="fw-bold pb-3">About Us</h2>
                     <h3>Turning Ideas into Impactful Software & Data Solutions</h3>
-                    <p>AthkaDo, based in Saudi Arabia, empowers Gulf businesses with tailored software and data
-                        solutions. With local expertise and a passion for innovation, we turn your ideas into impactful,
-                        fully functional tech solutions—built to fit your needs from start to finish.
+                    <p>We are AthkaDo IT Company, pioneers in the field of information technology and technological innovation, empowering organizations and individuals to keep pace with digital transformation efficiently and creatively. We strive to achieve our clients' goals and the digital transformation they aspire to by providing innovative tech solutions and advanced services that meet their needs and contribute to their growth and success in the digital age.
 
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-fluid"
-                        src="https://pixel-bee.b-cdn.net/wp-content/uploads/2023/11/forex-trade-graph-chart-concept-2.webp"
-                        alt="">
+                    <img class="img-fluid" src="Assets/about us.png" alt="">
                 </div>
 
             </div>
@@ -300,7 +367,7 @@
     <!-- Services Section -->
     <section id="services" class="py-5 section">
         <div class="container text-center">
-            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255);">Our Services</h2>
+            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255); font-family: unna;">Our Services</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="pb-3">
@@ -347,7 +414,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="pb-3">
-                        <img src="Assets/VR.jpg" class="img-fluid card" alt="">
+                        <img src="Assets/man-with-futuristic-device-medium-shot 1.png" class="img-fluid card" alt="">
                     </div>
                     <h4>AR, VR, and Metaverse Development</h4>
                     <p> Bringing your ideas to life in immersive digital experiences that captivate users.
@@ -368,7 +435,8 @@
 
                     </div>
                     <h4>Market Research & Business Analysis</h4>
-                    <p> In-depth analysis of industry trends and market insights to refine your strategies and keep you competitive.
+                    <p> In-depth analysis of industry trends and market insights to refine your strategies and keep you
+                        competitive.
                     </p>
                 </div>
 
@@ -387,24 +455,28 @@
 
         </div>
     </section>
-     <!-- our mission section -->
-    
-     <div class="row image-container">
-        <img src="Assets/mission5.jpg" class="img-fluid" alt="">
+    <!-- our mission section -->
+
+    <div class="row image-container">
+        <img src="Assets/mission ho.png" class="img-fluid " alt="">
+
 
         <div class="overlay-text">
-            <h1 class="fw-bold " style="color: rgba(104,209,223,255);">Our mission
-            </h1>
+
             <div class="pb-3">
-                <h2 style="color: rgba(104,209,223,255);" class="fw-bold">At AthkaDo, our mission is simple: </h2>
-                <p>to be your trusted partner in digital transformation, delivering data-driven solutions and custom
+                <h1 class="fw-bold " style="color: rgba(104,209,223,255); font-family: unna;">Our mission </h1>
+                <h3> At AthkaDo, our mission is simple:</h3>
+
+                <p class=""> to be your trusted partner in digital transformation, delivering data-driven solutions
+                    and custom
                     software to help your business thrive.
-                    <br> We’re with you every step of the way.</p>
+                    <br> We’re with you every step of the way.
+                </p>
             </div>
         </div>
 
     </div>
-        <!-- <div class="row image-container">
+    <!-- <div class="row image-container">
             <img src="Assets/mission5.jpg" class="img-fluid" alt="">
     
             <div class="overlay-text">
@@ -419,40 +491,41 @@
             </div>
     
         </div> -->
-        
+
     <!-- our values section -->
     <section id="values" class="section pt-5 pb-5">
         <div class="container text-center">
-            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255);">Our Values</h2>
+            <h2 class="mb-4 fw-bold pb-5" style="color: rgba(104,209,223,255); font-family: unna;">Our Values</h2>
 
             <div class="container mt-5">
                 <div id="multiColumnCarousel" class="carousel slide" data-bs-ride="carousel">
-                    
+
                     <!-- Carousel indicators -->
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#multiColumnCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                        <button type="button" data-bs-target="#multiColumnCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true"></button>
                         <button type="button" data-bs-target="#multiColumnCarousel" data-bs-slide-to="1"></button>
                     </div>
-            
+
                     <!-- Carousel inner -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row">
                                 <div class="col-md-4 values">
                                     <div class="card" style="background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/accuracy2.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/accuracy2.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>Accuracy</h3>
                                             <p>Every detail, every line of code, crafted with precision.</p>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/innovation.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/innovation.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>Innovation</h3>
                                             <p> Fresh ideas and technologies to keep you ahead.</p>
@@ -461,8 +534,8 @@
                                 </div>
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/Integrity.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/Integrity.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>Integrity</h3>
                                             <p> Honest, transparent, and committed to what’s right.</p>
@@ -471,13 +544,14 @@
                                 </div>
                             </div>
                         </div>
-            
+
                         <div class="carousel-item">
                             <div class="row">
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/Customer-Centricity.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/Customer-Centricity.jpg" class="card-img-top img-fluid"
+                                            alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>Customer-Centricity</h3>
                                             <p> Your goals drive our work; we listen and adapt.</p>
@@ -486,27 +560,29 @@
                                 </div>
                                 <div class="col-md-4 values">
                                     <div class="card" style=" background-color: rgba(8, 30, 77, 1); color: white;;">
-                                        <img src="Assets/Excellence.jpg" class="card-img-top img-fluid"  alt="Image 1">
-                                        
+                                        <img src="Assets/Excellence.jpg" class="card-img-top img-fluid" alt="Image 1">
+
                                         <div class="card-body">
                                             <h3>Excellence</h3>
                                             <p> From start to finish, we give our best.</p>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
-            
-                        
+
+
                     </div>
-            
+
                     <!-- Carousel controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#multiColumnCarousel" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#multiColumnCarousel"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#multiColumnCarousel" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#multiColumnCarousel"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -514,8 +590,32 @@
             </div>
         </div>
     </section>
-   
-   
+
+
+    <section id="vision" class="py-5 pt-5 section ">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="color: rgba(104,209,223,255) ; font-family: unna; " class="fw-bold pb-3">Our Vision</h2>
+                    <p>To be a role model in the Middle East region through the continuous pursuit of innovation and
+                        keeping pace with the latest technological developments to meet the needs of its customers and
+                        achieve their success in the era of technology and digital transformation.
+                    <h2 style="color: rgba(104,209,223,255) ; font-family: unna; " class="fw-bold pb-3">Our Objective</h2>We
+                   
+                    We aim to provide innovative tech solutions for both public and private entities to achieve their
+                    goals efficiently and seamlessly by focusing on quality, efficiency, and excellence in the services
+                    we deliver.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid" src="Assets/vision.jpg" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- <section class="py-5 pt-5 section " id="mission">
 
@@ -542,25 +642,26 @@
 
         <div class="container text-center" id="achievment">
             <div class="row">
-                <h2 class="mb-4 fw-bold" style="color: rgba(104,209,223,255);">Our Impact and Achievements</h2>
+                <h2 class="mb-4 fw-bold" style="color: rgba(104,209,223,255); font-family: unna;">Our Impact and
+                    Achievements</h2>
 
                 <div class="col-md-4 achievement">
 
 
-                    <div class="count" data-target="10">0</div>
+                    <div class="count" data-target="10" style="font-family: unna;">0</div>
                     <span class="fs-3 fw-bold" style="color: rgba(104,209,223,255);">Global Clients</span>
                     <p> Successfully partnered with businesses across various industries, delivering solutions that meet
                         diverse digital needs.</p>
                 </div>
                 <div class="col-md-4 achievement">
-                    <div class="count" data-target="20">0</div>
+                    <div class="count" data-target="20" style="font-family: unna">0</div>
                     <span class="fs-3 fw-bold" style="color: rgba(104,209,223,255);">Talented Specialists</span>
                     <p> A team of dedicated experts who bring depth of knowledge and specialized skills to every
                         project.
                     </p>
                 </div>
                 <div class="col-md-4 achievement">
-                    <div class="count" data-target="3">0</div>
+                    <div class="count" data-target="3" style="font-family: unna">0</div>
                     <span class="fs-3 fw-bold" style="color: rgba(104,209,223,255);">Regions Served</span>
                     <p> Expanding our reach across multiple regions, fostering innovation and delivering solutions with
                         lasting impact.
@@ -576,8 +677,8 @@
     <section class="py-5 pt-5 section" id="process">
         <div class="container pt-5">
             <div class="row">
-                <div >
-                    <h2 style="color: rgba(104,209,223,255) ; " class="fw-bold pb-3">Our Process</h2>
+                <div>
+                    <h2 style="color: rgba(104,209,223,255) ;font-family: unna; " class="fw-bold pb-3">Our Process</h2>
                     <h3> "Our Agile & Data-Driven Approach"
 
                     </h3>
@@ -586,88 +687,131 @@
                     </p>
                     <p>
                     <div class="row">
-                        <div class="col-6">
-                            <div class="list-group" id="list-tab" role="tablist"
-                                style="background-color: rgba(8, 30, 77, 1);">
-                                <a class="list-group-item list-group-item-action active" id="list-home-list1"
-                                    data-bs-toggle="list" href="#list-home1" role="tab" aria-controls="list-home"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">Consultation
-                                    & Analysis</a>
-                                <a class="list-group-item list-group-item-action" id="list-profile-list2"
-                                    data-bs-toggle="list" href="#list-profile2" role="tab" aria-controls="list-profile"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">User-Centered
-                                    Design</a>
-                                <a class="list-group-item list-group-item-action" id="list-messages-list3"
-                                    data-bs-toggle="list" href="#list-messages3" role="tab"
-                                    aria-controls="list-messages"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">Development
-                                    & Data Integration</a>
-                                <a class="list-group-item list-group-item-action" id="list-settings-list4"
-                                    data-bs-toggle="list" href="#list-settings4" role="tab"
-                                    aria-controls="list-settings"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">Quality
-                                    Assurance</a>
-                                <a class="list-group-item list-group-item-action" id="list-settings-list5"
-                                    data-bs-toggle="list" href="#list-settings5" role="tab"
-                                    aria-controls="list-settings"
-                                    style="color: rgba(104,209,223,255); background-color: rgba(8, 30, 77, 1);">Deployment
-                                    & Support</a>
+                        <div class="col-md-6">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Consultation & Analysis
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Understanding your goals and defining strategies for software or data
+                                            solutions.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            User-Centered Design
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Developing user-friendly designs for software and data platforms alike.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Development & Data Integration
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Crafting robust software while integrating accurate data for powerful
+                                            insights.
 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsefour"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Quality Assurance
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Testing software and verifying data accuracy to ensure optimal performance.
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapsefive"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Deployment & Support
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            Seamlessly deploying solutions and providing ongoing support for continued
+                                            success.
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="tab-content" id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="list-home1" role="tabpanel"
-                                    aria-labelledby="list-home-list1">Understanding your goals and defining strategies
-                                    for software or data solutions <br>
-                                   </div>
-                                    
-                                <div class="tab-pane fade" id="list-profile2" role="tabpanel"
-                                    aria-labelledby="list-profile-list2">Developing user-friendly designs for software
-                                    and data platforms alike</div>
-                                <div class="tab-pane fade" id="list-messages3" role="tabpanel"
-                                    aria-labelledby="list-messages-list3">Crafting robust software while integrating
-                                    accurate data for powerful insights</div>
-                                <div class="tab-pane fade" id="list-settings4" role="tabpanel"
-                                    aria-labelledby="list-settings-list4"> Testing software and verifying data accuracy
-                                    to ensure optimal performance</div>
-                                <div class="tab-pane fade" id="list-settings5" role="tabpanel"
-                                    aria-labelledby="list-settings-list5">Seamlessly deploying solutions and providing
-                                    ongoing support for continued success </div>
-                                    <br>
-                                    <img src="Assets/process final.jpg" class="img-fluid d-none d-md-block" alt="" style="height: fit-content; width: fit-content;">
-
-
-                            </div>
+                        <div class="col-md-6 pt-2">
+                            <img src="Assets/process ho.png" class="img-fluid  d-md-block" alt=""
+                                style="height: fit-content; width: fit-content;">
                         </div>
                     </div>
                     </p>
                     </span>
                 </div>
-               
+
 
             </div>
         </div>
     </section>
     <!-- Call to action -->
 
-    <section class="py-5 pt-5 section " id="calltoaction">
-        <div class="container pt-5">
-            <div class="row">
-                <div class="col">
-                    <h2 style="color: rgba(104,209,223,255) ; " class="fw-bold">Let’s Transform Your Business Together!
-                    </h2>
+    <div class="row image-container">
+        <img src="Assets/B.png" class="img-fluid " alt="">
 
-                    <p>
-                        Let’s connect and explore how AthkaDo can help you achieve your digital goals with solutions
-                        designed for the Gulf market. We’re here to support your vision every step of the way! </p>
-                    </span>
-                </div>
+        <div class="overlay-text">
 
-
+            <div class="">
+                <h2 style="color: rgba(104,209,223,255); font-family: unna;" class="fw-bold  pt-3">Let’s Transform
+                    Your Business Together! </h2>
+                <p class="">Let’s connect and explore how AthkaDo can help you achieve your digital goals with
+                    solutions
+                    designed for the Gulf market.
+                    <br> We’re here to support your vision every step of the way!
+                </p>
             </div>
         </div>
-    </section>
+
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <hr>
+    </div>
+
 
 
 
@@ -677,11 +821,11 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5 section">
         <div class="container">
-            <h2 class="text-center pb-5" style="color: rgba(104,209,223,255);">Contact Us</h2>
+            <h2 class="text-center pb-5" style="color: rgba(104,209,223,255); font-family: unna;">Contact Us</h2>
 
             <div>
                 <div class="row">
-                    <div class="mb-3 col-6">
+                    <div class="mb-3 col-md-12">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-telephone-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -696,7 +840,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="mb-3 col-6">
+                    <div class="mb-3 col-md-12">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-envelope-arrow-up-fill" viewBox="0 0 16 16">
                             <path
@@ -716,7 +860,7 @@
 
                 <div class="row">
 
-                    <div class="mb-3 col-6">
+                    <div class="mb-3 col-md-12">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                             <path
@@ -750,13 +894,15 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-QVf0MJL42ZvoZkn0Jr/SQErFsDJmrZEvjtOz/Q7hbd60izICW5npeIzfSy6HeNeJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-QVf0MJL42ZvoZkn0Jr/SQErFsDJmrZEvjtOz/Q7hbd60izICW5npeIzfSy6HeNeJ"
+        crossorigin="anonymous"></script>
 
     <!-- Custom script (if any) -->
     <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
