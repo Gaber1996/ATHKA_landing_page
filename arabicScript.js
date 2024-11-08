@@ -6,6 +6,8 @@ let isDeleting = false; // Whether we're deleting or typing
 
 
 
+
+
 function type() {
     const currentWord = animatedContentHeaderList[wordIndex];
     

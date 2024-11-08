@@ -6,6 +6,7 @@ let isDeleting = false; // Whether we're deleting or typing
 
 
 
+
 function type() {
     const currentWord = animatedContentHeaderList[wordIndex];
     
@@ -85,6 +86,10 @@ observer.observe(section);
 
 // Start the typewriter effect
 type();
+
+
+
+
 
 
 
