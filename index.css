@@ -1238,13 +1238,14 @@
 
 @media screen and (max-width: 768px) {
   .responsive-engaging-apps-container {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
+    line-height: 0.4rem;
   }
   .heading-3-containe{
     font-size: 0.6rem
   }
   .bringing-your-ideas{
-    font-size: 0.4rem !important;
+    font-size: 0.3rem !important;
   }
 }
 .service-bgsvg-icon {
@@ -3519,7 +3520,7 @@
 @media screen and (max-width: 768px) {
   .athkado-based-in {
     font-size: 0.5rem;
-    width: 20rem;
+    width: 15rem;
   }
 }
 
