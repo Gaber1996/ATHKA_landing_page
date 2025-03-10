@@ -3837,6 +3837,54 @@ body, html {
   .header3{
     margin-bottom: 20px;
   }
+  .content3{
+    font-size: 0.4rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .successfully-partnered-with-container {
+    display: none;
+  }
+  .a-team-of-container{
+    display: none;
+  }
+  .description,.development-paragraph{
+    font-size: .3rem;
+  }
+  .to-be-your-container{
+    font-size: .5rem;
+  }
+  .heading-310{
+    font-size: .6rem;
+  }
+  .expanding-our-reach1,.expanding-our-reach4{
+    font-size: .4rem;
+  }
+  .digital-marketing2{
+    font-size: .4rem;
+  }
+  .lets-connect-and{
+    font-size: .3rem;
+  }
+  .footer-content-wrapper{
+    font-size: .4rem;
+  }
+  .card14{
+    width: 15rem;
+    height: 1.2rem;
+  }
+  .footer-description{
+    font-size: 0.3rem;
+  }
+  .heading-315{
+    font-size: 0.3rem;
+  }
+  .social-names{
+    width: 100vw;
+  }
+  
+
+  
 }
 
 
