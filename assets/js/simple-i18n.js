@@ -12,7 +12,7 @@ const languageContent = {
         navProcess: "Our Process",
         navContact: "Contact",
         navLanguage: "العربية",
-        navLogo:'<img class="testpng-icon" loading="lazy" alt="" src="assets/images/eng logo.png" />',
+        navLogo:'<img class="testpng-icon" loading="lazy" alt="" src="assets/images/eng logo.PNG" />',
         // Hero Section
         heroTitle: 'AthkaDO <span class="highlight">Leading Software Company</span> in Saudi Arabia',
         heroSubtitle: "Turning Ideas into Impactful Software & Data Solutions",
@@ -148,7 +148,7 @@ const languageContent = {
         navProcess: "منهجيتنا",
         navContact: "تواصل معنا",
         navLanguage: "English",
-        navLogo:'<img class="testpng-icon" loading="lazy" alt="" src="assets/images/ar logo.png" />',
+        navLogo:'<img class="testpng-icon" loading="lazy" alt="" src="assets/images/ar logo.PNG" />',
         
         // Hero Section
         heroTitle: 'أذكى التطويرية <span class="highlight">الشركة الرائدة في البرمجيات</span> في المملكة العربية السعودية',
