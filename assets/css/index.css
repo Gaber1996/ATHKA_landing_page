@@ -1,0 +1,532 @@
+/* ===================================
+   HERO SECTION STYLES
+   =================================== */
+
+/* =================
+   MAIN PAGE CONTAINER
+   ================= */
+
+
+
+.main {
+    width: 100%;
+    position: relative;
+    background-color: #051c4d;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 0 0.02vw;
+    box-sizing: border-box;
+    gap: 0.73vw;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: var(--gaber1996githubio-roboto-regular-16-size);
+    color: var(--gaber1996githubio-white);
+    font-family: var(--gaber1996githubio-roboto-regular-16);
+    max-width: 100%;
+}
+
+.main-inner {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-12xs) var(--padding-87xl) 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Global overflow control */
+.main, 
+.main-inner, 
+.earth-planet-1920x1080-parent, 
+.frame-section, 
+.frame-parent2, 
+.cards {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* =================
+   MAIN LAYOUT & BACKGROUND EFFECTS
+   ================= */
+
+/* Background Gradient Effects */
+.main-child {
+    width: 47.62vw;
+    height: 52.39vw;
+    position: absolute;
+    margin: 0 !important;
+    top: 69.05vw;
+    right: -58.24vw;
+    filter: blur(13.79vw);
+    border-radius: 50%;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        rgba(255, 97, 97, 0.65) 0deg,
+        rgba(149, 185, 255, 0.65) 70.5deg,
+        rgba(149, 185, 255, 0.65) 162.37deg,
+        rgba(149, 185, 255, 0.65) 233.62deg,
+        rgba(151, 71, 255, 0.65) 310.5deg
+    );
+    flex-shrink: 0;
+    transform: rotate(122.1deg);
+    transform-origin: 0 0;
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
+
+.main-item {
+    width: 47.62vw;
+    height: 52.39vw;
+    position: absolute;
+    margin: 0 !important;
+    top: 143.58vw;
+    left: 37.02vw;
+    filter: blur(13.79vw);
+    border-radius: 50%;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        rgba(255, 97, 97, 0.65) 0deg,
+        rgba(149, 185, 255, 0.65) 70.5deg,
+        rgba(149, 185, 255, 0.65) 162.37deg,
+        rgba(149, 185, 255, 0.65) 233.62deg,
+        rgba(151, 71, 255, 0.65) 310.5deg
+    );
+    flex-shrink: 0;
+    transform: rotate(122.1deg);
+    transform-origin: 0 0;
+    mix-blend-mode: overlay;
+}
+
+/* =================
+   HERO CONTAINER
+   ================= */
+
+.earth-planet-1920x1080 {
+    width: 100vw;
+    height: 51.72vw;
+    position: relative;
+    background-color: var(--color-darkslateblue-100);
+    display: none;
+    max-width: 100%;
+}
+
+.earth-planet-1920x1080-parent {
+    position: relative;
+    overflow: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 1.82vw 4.38vw 6.12vw;
+    gap: 8.02vw;
+    width: 100%;
+    z-index: 1;
+}
+
+/* =================
+   BACKGROUND VIDEO
+   ================= */
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+/* =================
+   HERO CONTENT LAYOUT
+   ================= */
+
+.frame-wrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 0 0 var(--padding-11xs);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.component-8-parent {
+    width: 81.50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+/* =================
+   HERO CONTENT
+   ================= */
+
+.hero {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Text Styles */
+#herosec {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+#herosecwords {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    opacity: 0.8;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+/* Text Styling Classes */
+.highlight {
+    color: #56C5FF;
+    font-weight: 600;
+}
+
+.span {
+    color: var(--color-cyan-64);
+}
+
+.ideas1 {
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+.turning {
+    font-weight: 300;
+}
+
+/* =================
+   HERO CTA BUTTONS
+   ================= */
+
+/* Alternative CTA Button Styles */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #56C5FF;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    box-shadow: var(--shadow-base);
+}
+
+.cta-button:hover {
+    background-color: #30d5c8;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+.transform-button {
+    width: 37.97vw;
+    height: 3.44vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 0 28.70vw;
+    box-sizing: border-box;
+    font-size: var(--gaber1996githubio-roboto-regular-16-size);
+}
+
+/* Button Container Styles - Consolidated */
+.get-in-touch-container,
+.get-in-touch-group,
+.get-in-touch-parent {
+    width: 9.27vw;
+    height: 3.44vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-5xs);
+    box-sizing: border-box;
+    gap: var(--gap-base);
+    text-align: center;
+    font-size: var(--gaber1996githubio-roboto-regular-16-size);
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+/* Button Text */
+.get-in-touch {
+    height: 1.09vw;
+    width: 5.83vw;
+    position: relative;
+    line-height: 1.17vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+/* Button Icon */
+.background-icon {
+    height: 2.60vw;
+    width: 2.60vw;
+    position: relative;
+    border-radius: var(--br-6xl);
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+
+.background-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Button Hover Effects */
+.get-in-touch-container:hover,
+.get-in-touch-group:hover,
+.get-in-touch-parent:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* =================
+   HERO CTA SECTION
+   ================= */
+
+.lets-transform-your-business-parent {
+    height: 24.90vw;
+    width: 66.67vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--gap-lgi);
+    max-width: 100%;
+}
+
+.lets-transform-your-container {
+    margin: 0;
+    align-self: stretch;
+    height: 15.42vw;
+    position: relative;
+    font-size: inherit;
+    line-height: 7.24vw;
+    font-weight: 700;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    color: var(--color-text-light);
+}
+
+.lets-connect-and,
+.lets-connect-and1 {
+    margin: 0;
+    align-self: stretch;
+    height: 4.06vw;
+    position: relative;
+    font-size: var(--font-size-5xl);
+    line-height: 1.72vw;
+    font-weight: 400;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+}
+
+.lets-connect-and1 {
+    height: auto;
+    justify-content: flex-start;
+}
+
+/* =================
+   BACKGROUND ELEMENTS
+   ================= */
+
+.background-wrapper {
+    width: 78.42vw;
+    height: 2.62vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 var(--padding-xl);
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.background {
+    align-self: stretch;
+    width: 7.59vw;
+    position: relative;
+    border-radius: var(--br-81xl);
+    opacity: 0.2;
+    z-index: 2;
+    background: var(--color-white-20);
+}
+
+/* Additional Background Gradient Effect */
+.ellipse-div {
+    width: 48.96vw;
+    height: 53.86vw;
+    position: absolute;
+    margin: 0 !important;
+    top: 176.74vw;
+    right: -76.02vw;
+    filter: blur(13.79vw);
+    border-radius: 50%;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        rgba(255, 97, 97, 0.5) 0deg,
+        rgba(149, 185, 255, 0.5) 70.5deg,
+        rgba(149, 185, 255, 0.5) 162.37deg,
+        rgba(149, 185, 255, 0.5) 233.62deg,
+        rgba(151, 71, 255, 0.5) 310.5deg
+    );
+    flex-shrink: 0;
+    transform: rotate(122.1deg);
+    transform-origin: 0 0;
+    mix-blend-mode: overlay;
+}
+
+/* Hero Component Icon */
+.component-8-icon {
+    align-self: stretch;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    z-index: 3;
+}
+
+/* =================
+   HERO ANIMATIONS
+   ================= */
+
+/* About Section Animation Setup */
+.frame-container {
+    width: 42.34vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2.24vw 0 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Animation States */
+.light-trails-buildings-icon,
+.frame-container {
+    opacity: 0;
+    transition: all 1.5s ease-in-out;
+    will-change: transform, opacity;
+}
+
+.light-trails-buildings-icon {
+    transform: translateX(-10.42vw);
+}
+
+.frame-container {
+    transform: translateX(10.42vw);
+}
+
+/* Visible State */
+.light-trails-buildings-icon.visible,
+.frame-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* =================
+   HERO SECTION ENHANCEMENTS
+   ================= */
+
+/* Scroll Indicator */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 30px;
+    background: var(--color-accent);
+    opacity: 0.6;
+    animation: scrollIndicator 2s infinite;
+}
+
+@keyframes scrollIndicator {
+    0%, 100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(10px); }
+}
+
+/* Hero Focus States */
+.hero *:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Performance Optimizations */
+.hero {
+    contain: layout style paint;
+}
+
+.background-video {
+    will-change: opacity;
+}
+
+/* =================
+   ACCESSIBILITY
+   ================= */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .light-trails-buildings-icon,
+    .frame-container,
+    .background-icon,
+    .get-in-touch-container {
+        transition: none;
+        animation: none;
+    }
+    
+    .hero::after {
+        animation: none;
+    }
+}
+
+.hero-cta-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-base);
+}
+

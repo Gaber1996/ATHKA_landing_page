@@ -1,0 +1,145 @@
+<!-- Hero Section with Navigation -->
+<section class="main-inner">
+    <div class="earth-planet-1920x1080-parent">
+        <!-- Background Video - ENHANCED FOR RELIABLE PLAYBACK -->
+        <video id="heroBackgroundVideo" class="background-video" autoplay muted loop playsinline preload="auto" poster="assets/images/about.png">
+            <source src="assets/videos/hero-background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Navigation Header -->
+        <header class="nav-bar">
+            <div class="buttons">
+                <!-- Logo -->
+                <div class="buttons-inner">
+                    <div id='athkado-logo' class="testpng-parent">
+                        <img  class="testpng-icon" loading="lazy" alt="" src="assets/images/white logo.png" />
+                    </div>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="buttons-child">
+                    <div class="home-parent">
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="#about-us-sec" class="nav-link">About Us</a>
+                        <a href="#our-services-sec" class="nav-link">Our Services</a>
+                        <a href="#our-mission-sec" class="nav-link">Our Mission</a>
+                        <a href="#our-achievment-sec" class="nav-link">Our Achievements</a>
+                        <a href="#process-sec" class="nav-link">Our Process</a>
+                        <a href="arabic.html" class="nav-link lang-switch">العربية</a>
+                    </div>
+                </div>
+                
+                <!-- Contact Button and Mobile Menu -->
+                <div class="contact-menu-wrapper">
+                    <a href="#contact" class="web-butttons">
+                        <span class="lets-talk">Contact</span>
+                    </a>
+                    
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav">
+                <a href="#home">Home</a>
+                <a href="#about-us-sec">About Us</a>
+                <a href="#our-services-sec">Our Services</a>
+                <a href="#our-mission-sec">Our Mission</a>
+                <a href="#our-achievment-sec">Our Achievements</a>
+                <a href="#process-sec">Our Process</a>
+                <a href="arabic.html" class="lang-switch">العربية</a>
+            </nav>
+        </header>
+        
+        <!-- Hero Content -->
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 id="herosec">AthkaDO <span class="highlight">Leading Software Company</span> in Saudi Arabia</h1>
+                    <p id="herosecwords">Turning Ideas into Impactful Software & Data Solutions</p>
+                    <a href="https://calendar.app.google/BZCxNQH8pKGGaHXb6" target="_blank" class="hero-cta-button">
+                        <b>Get In Touch</b>
+                        <img class="background-icon" loading="lazy" alt="" src="assets/images/background.svg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Enhanced video playback with multiple fallbacks
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('heroBackgroundVideo');
+    const container = document.querySelector('.earth-planet-1920x1080-parent');
+    
+    if (!video || !container) return;
+    
+    // Function to attempt video playback with error handling
+    const attemptPlay = function() {
+        if (video.paused) {
+            video.play().then(() => {
+                console.log('Video playback started successfully');
+                video.classList.add('playing');
+                container.classList.add('video-playing');
+            }).catch(error => {
+                console.warn('Autoplay prevented:', error);
+                container.classList.add('video-blocked');
+                
+                // Add click-to-play fallback
+                document.addEventListener('click', function clickToPlay() {
+                    video.play().then(() => {
+                        console.log('Video playback started on user interaction');
+                        video.classList.add('playing');
+                        container.classList.add('video-playing');
+                        document.removeEventListener('click', clickToPlay);
+                    }).catch(e => {
+                        console.error('Video play failed even with user interaction:', e);
+                        container.classList.add('video-error');
+                    });
+                }, { once: false });
+            });
+        }
+    };
+    
+    // Set up event listeners for video
+    video.addEventListener('loadedmetadata', function() {
+        console.log('Video metadata loaded');
+        attemptPlay();
+    });
+    
+    video.addEventListener('canplay', function() {
+        console.log('Video can play');
+        attemptPlay();
+    });
+    
+    // Handle video errors
+    video.addEventListener('error', function(e) {
+        console.error('Video error occurred:', e);
+        container.classList.add('video-error');
+    });
+    
+    // Try to play immediately in case the video is already loaded
+    attemptPlay();
+    
+    // Force reload if video stalls
+    video.addEventListener('stalled', function() {
+        console.warn('Video stalled, attempting to reload');
+        video.load();
+        setTimeout(attemptPlay, 1000);
+    });
+    
+    // Check if video is actually playing after a short delay
+    setTimeout(function() {
+        if (video.paused) {
+            console.warn('Video still paused after timeout, trying again');
+            attemptPlay();
+        }
+    }, 2000);
+});
+</script>

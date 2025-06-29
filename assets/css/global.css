@@ -1,0 +1,399 @@
+/* ===================================
+   ATHKADO - Global Styles & Variables
+   =================================== */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    line-height: normal;
+    font-family: var(--font-primary);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+/* Global Overflow Control */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* CRITICAL: Global Image Positioning Fix */
+img {
+    max-width: 100%;
+    height: auto;
+    position: static !important; /* Force static positioning */
+    z-index: 1 !important;
+    display: block;
+    object-fit: cover;
+}
+
+/* CRITICAL: Ensure all images stay within their containers */
+img:not(.testpng-icon):not(.nav-bar img):not(.mobile-nav img) {
+    position: static !important;
+    z-index: 1 !important;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+/* Special handling for navigation images */
+.nav-bar img,
+.mobile-nav img,
+.testpng-icon {
+    position: relative !important;
+    z-index: 999999 !important;
+}
+
+/* Global Link Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Base Font Sizes */
+@media (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* ===================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   =================================== */
+
+:root {
+    /* =================
+       TYPOGRAPHY
+       ================= */
+    
+    /* Font Families */
+    --font-primary: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-secondary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-tertiary: Unna, Georgia, serif;
+    --font-quaternary: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    
+    /* Font Sizes - Responsive (vw units) */
+    --font-size-xs: 0.73vw;          /* 12px equivalent */
+    --font-size-sm: 0.83vw;          /* 14px equivalent */
+    --font-size-base: 0.94vw;        /* 16px equivalent */
+    --font-size-lg: 0.99vw;          /* 18px equivalent */
+    --font-size-xl: 1.04vw;          /* 20px equivalent */
+    --font-size-2xl: 1.09vw;         /* 22px equivalent */
+    --font-size-3xl: 1.15vw;         /* 24px equivalent */
+    --font-size-4xl: 1.25vw;         /* 28px equivalent */
+    --font-size-5xl: 1.35vw;         /* 32px equivalent */
+    --font-size-6xl: 1.46vw;         /* 36px equivalent */
+    --font-size-7xl: 1.56vw;         /* 40px equivalent */
+    --font-size-8xl: 1.93vw;         /* 48px equivalent */
+    --font-size-9xl: 2.08vw;         /* 56px equivalent */
+    --font-size-10xl: 2.40vw;        /* 64px equivalent */
+    --font-size-11xl: 2.60vw;        /* 72px equivalent */
+    --font-size-12xl: 3.65vw;        /* 96px equivalent */
+    
+    /* Legacy Font Sizes (keeping for compatibility) */
+    --gaber1996githubio-roboto-regular-16-size: 0.83vw;
+    --gaber1996githubio-roboto-regular-20-size: 1.04vw;
+    --font-size-xl-4: 1.06vw;
+    --font-size-lgi: 0.99vw;
+    --font-size-11xl-1: 1.57vw;
+    --font-size-21xl: 2.08vw;
+    --font-size-27xl: 2.40vw;
+    --font-size-31xl: 2.60vw;
+    --font-size-51xl: 3.65vw;
+    
+    /* =================
+       COLORS
+       ================= */
+    
+    /* Primary Brand Colors */
+    --color-primary: #081e4d;
+    --color-primary-light: rgba(5, 28, 76, 0.7);
+    --color-primary-lighter: rgba(5, 29, 81, 0.6);
+    --color-accent: #80f0ff;
+    --color-accent-secondary: #68d1df;
+    
+    /* Background Colors */
+    --color-background: #fff;
+    --color-background-secondary: #f5f5f4;
+    --color-background-overlay: rgba(6, 25, 90, 0.8);
+    --color-background-overlay-light: rgba(5, 33, 104, 0.4);
+    
+    /* Text Colors */
+    --color-text-primary: #081e4d;
+    --color-text-secondary: rgba(255, 255, 255, 0.8);
+    --color-text-light: #fff;
+    --color-text-muted: rgba(255, 255, 255, 0.6);
+    
+    /* Utility Colors */
+    --color-white: #fff;
+    --color-white-50: rgba(255, 255, 255, 0.5);
+    --color-white-20: rgba(255, 255, 255, 0.2);
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-gray-10: rgba(230, 230, 230, 0.1);
+    --color-gray-09: rgba(230, 230, 230, 0.09);
+    
+    /* Legacy Color Names (keeping for compatibility) */
+    --color-azure-17: #081e4d;
+    --color-darkslateblue-100: rgba(5, 28, 76, 0.7);
+    --color-darkslateblue-200: rgba(5, 29, 81, 0.6);
+    --color-gray-100: rgba(255, 255, 255, 0.5);
+    --color-gray-200: rgba(255, 255, 255, 0.2);
+    --color-gray-300: rgba(255, 255, 255, 0.1);
+    --gaber1996githubio-white: #fff;
+    --color-whitesmoke-100: #f5f5f4;
+    --color-paleturquoise: #80f0ff;
+    --color-cyan-64: #68d1df;
+    --color-midnightblue-100: rgba(6, 25, 90, 0.8);
+    --color-midnightblue-200: rgba(5, 33, 104, 0.4);
+    --color-gainsboro-100: rgba(230, 230, 230, 0.1);
+    --color-gainsboro-200: rgba(230, 230, 230, 0.09);
+    
+    /* =================
+       SPACING SYSTEM
+       ================= */
+    
+    /* Gaps */
+    --gap-xs: 0.36vw;      /* 6px equivalent */
+    --gap-sm: 0.42vw;      /* 8px equivalent */
+    --gap-base: 0.83vw;    /* 16px equivalent */
+    --gap-lg: 0.94vw;      /* 18px equivalent */
+    --gap-xl: 1.04vw;      /* 20px equivalent */
+    --gap-2xl: 1.20vw;     /* 24px equivalent */
+    --gap-3xl: 1.25vw;     /* 28px equivalent */
+    --gap-4xl: 1.30vw;     /* 32px equivalent */
+    --gap-5xl: 1.51vw;     /* 36px equivalent */
+    --gap-6xl: 1.88vw;     /* 40px equivalent */
+    --gap-7xl: 2.03vw;     /* 48px equivalent */
+    --gap-8xl: 2.08vw;     /* 56px equivalent */
+    --gap-9xl: 2.34vw;     /* 64px equivalent */
+    --gap-10xl: 2.50vw;    /* 72px equivalent */
+    --gap-11xl: 2.66vw;    /* 80px equivalent */
+    --gap-12xl: 3.02vw;    /* 96px equivalent */
+    
+    /* Legacy Gap Names (keeping for compatibility) */
+    --gap-29xl: 2.50vw;
+    --gap-5xl: 1.25vw;
+    --gap-5xs: 0.42vw;
+    --gap-6xl: 1.30vw;
+    --gap-6xs: 0.36vw;
+    --gap-lgi: 0.99vw;
+    --gap-32xl: 2.66vw;
+    --gap-20xl: 2.03vw;
+    --gap-17xl: 1.88vw;
+    --gap-21xl: 2.08vw;
+    --gap-211xl-3: 11.99vw;
+    --gap-96xl: 5.99vw;
+    --gap-39xl: 3.02vw;
+    --gap-4xl: 1.20vw;
+    --gap-54xl: 3.80vw;
+    --gap-10xl: 1.51vw;
+    --gap-48xl-1: 3.49vw;
+    --gap-26xl: 2.34vw;
+    
+    /* Padding */
+    --padding-xs: 0.42vw;     /* 8px equivalent */
+    --padding-sm: 0.78vw;     /* 12px equivalent */
+    --padding-base: 0.83vw;   /* 16px equivalent */
+    --padding-lg: 0.94vw;     /* 18px equivalent */
+    --padding-xl: 1.04vw;     /* 20px equivalent */
+    --padding-2xl: 1.09vw;    /* 24px equivalent */
+    --padding-3xl: 1.30vw;    /* 28px equivalent */
+    --padding-4xl: 1.41vw;    /* 32px equivalent */
+    --padding-5xl: 1.51vw;    /* 36px equivalent */
+    --padding-6xl: 1.61vw;    /* 40px equivalent */
+    --padding-7xl: 1.88vw;    /* 48px equivalent */
+    --padding-8xl: 2.08vw;    /* 56px equivalent */
+    --padding-9xl: 2.19vw;    /* 64px equivalent */
+    --padding-10xl: 2.66vw;   /* 72px equivalent */
+    
+    /* Legacy Padding Names (keeping for compatibility) */
+    --padding-xl: 1.04vw;
+    --padding-8xl: 1.41vw;
+    --padding-2xl: 1.09vw;
+    --padding-mini: 0.78vw;
+    --padding-7xs-1: 0.27vw;
+    --padding-9xs: 0.21vw;
+    --padding-5xs-5: 0.39vw;
+    --padding-87xl: 5.52vw;
+    --padding-50xl: 3.59vw;
+    --padding-5xs: 0.42vw;
+    --padding-80xl: 5.16vw;
+    --padding-21xl: 2.08vw;
+    --padding-12xs: 0.05vw;
+    --padding-6xl: 1.30vw;
+    --padding-23xl: 2.19vw;
+    --padding-11xl-3: 1.58vw;
+    --padding-4xs: 0.47vw;
+    --padding-57xl: 3.96vw;
+    --padding-20xl-4: 2.05vw;
+    --padding-20xl-3: 2.05vw;
+    --padding-32xl: 2.66vw;
+    --padding-12xl: 1.61vw;
+    --padding-102xl: 6.30vw;
+    --padding-223xl: 12.60vw;
+    --padding-55xl: 3.85vw;
+    --padding-15xl: 1.77vw;
+    --padding-10xl: 1.51vw;
+    --padding-9xl: 1.46vw;
+    --padding-5xl: 1.25vw;
+    --padding-8xl-9: 1.45vw;
+    --padding-23xl-1: 2.19vw;
+    --padding-17xl: 1.88vw;
+    --padding-11xs: 0.10vw;
+    --padding-smi: 0.68vw;
+    --padding-lg: 0.94vw;
+    --padding-lgi: 0.99vw;
+    
+    /* =================
+       BORDER RADIUS
+       ================= */
+    
+    --radius-sm: 0.26vw;      /* 4px equivalent */
+    --radius-base: 0.52vw;    /* 8px equivalent */
+    --radius-lg: 1.30vw;      /* 20px equivalent */
+    --radius-xl: 1.84vw;      /* 28px equivalent */
+    --radius-2xl: 2.14vw;     /* 32px equivalent */
+    --radius-3xl: 5.21vw;     /* 80px equivalent */
+    
+    /* Legacy Border Radius Names (keeping for compatibility) */
+    --br-81xl: 5.21vw;
+    --br-6xl: 1.30vw;
+    --br-8xs: 0.26vw;
+    --br-22xl: 2.14vw;
+    --br-16xl-4: 1.84vw;
+    --br-3xs: 0.52vw;
+    
+    /* =================
+       SHADOWS & EFFECTS
+       ================= */
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    
+    /* =================
+       TRANSITIONS
+       ================= */
+    
+    --transition-fast: 0.15s ease-in-out;
+    --transition-base: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+    
+    /* =================
+       Z-INDEX SYSTEM
+       ================= */
+    
+    --z-dropdown: 1000;
+    --z-sticky: 1010;
+    --z-fixed: 1020;
+    --z-modal-backdrop: 1030;
+    --z-modal: 1040;
+    --z-popover: 1050;
+    --z-tooltip: 1060;
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Display Utilities */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+/* Flexbox Utilities */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Focus States */
+*:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* Selection Styles */
+::selection {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* CRITICAL: Section Container Fixes */
+section {
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: hidden;
+    contain: layout style;
+}
+
+/* CRITICAL: Ensure all content containers are properly contained */
+.main,
+.main-inner,
+.earth-planet-1920x1080-parent,
+.frame-section,
+.content-wrapper,
+.content-container,
+.content-frame,
+.development,
+.transform,
+.footer-content-wrapper {
+    position: relative !important;
+    z-index: 1 !important;
+    overflow: hidden;
+    contain: layout style;
+}
+
+/* CRITICAL: Force all background elements to stay in background */
+.main-child,
+.main-item,
+.ellipse-div,
+.background-video {
+    position: absolute !important;
+    z-index: 0 !important;
+}

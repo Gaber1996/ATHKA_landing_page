@@ -1,0 +1,357 @@
+/* ===================================
+   RESPONSIVE DESIGN STYLES
+   =================================== */
+
+/* =================
+   GENERAL RESPONSIVE STYLES
+   ================= */
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* =================
+   TABLET STYLES (768px - 1023px)
+   ================= */
+
+@media screen and (max-width: 1023px) {
+  /* Navigation */
+  .nav-bar {
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .buttons-child {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  /* Hero Section */
+  #herosec {
+    font-size: 2.5rem;
+  }
+  
+  #herosecwords {
+    font-size: 1rem;
+  }
+  
+  /* About Section */
+  .light-trails-buildings-parent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .light-trails-buildings-icon {
+    width: 100%;
+    height: auto;
+  }
+  
+  .frame-container {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  /* Services Section */
+  .card-parent {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+  
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card6, .card7 {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+  
+  /* Mission Section */
+  .description1 {
+    padding: 0 2rem;
+  }
+  
+  /* Values Section */
+  .content7 {
+    flex-wrap: wrap;
+  }
+  
+  .cards1, .cards2 {
+    width: 100%;
+    padding: 0;
+  }
+  
+  /* Process Section */
+  .development-content {
+    flex-direction: column;
+  }
+  
+  .development-header, .development-paragraph {
+    width: 100%;
+  }
+  
+  .border2 {
+    width: 100%;
+  }
+}
+
+/* =================
+   MOBILE STYLES (767px and below)
+   ================= */
+
+@media screen and (max-width: 767px) {
+  /* Adjusting Base Sizes */
+  :root {
+    --font-size-31xl: 2rem;
+    --font-size-11xl: 1.5rem;
+    --font-size-7xl: 1.2rem;
+    --font-size-5xl: 1.1rem;
+  }
+  
+  /* Navigation */
+  .nav-bar {
+    padding: 0.8rem;
+  }
+  
+  .athkado {
+    font-size: 1.2rem;
+  }
+  
+ 
+  
+  .web-butttons {
+    padding: 0.5rem 1rem;
+  }
+  
+  .lets-talk {
+    font-size: 0.8rem;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 1rem;
+  }
+  
+  #herosec {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+  
+  #herosecwords {
+    font-size: 0.9rem;
+  }
+  
+  .hero-cta-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Services Section */
+  .card {
+    width: 90%;
+  }
+  
+  .cards {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .your-success-story-container {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  
+  /* Achievements Section */
+  .title1 {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .content3 {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .items3, .items5 {
+    width: 100%;
+  }
+  
+  /* Footer Section */
+  .footer-links {
+    flex-direction: column;
+  }
+  
+  .contact {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* CTA Section */
+  .lets-transform-your-container {
+    font-size: 2rem;
+    line-height: 1.3;
+    height: auto;
+  }
+  
+  .lets-connect-and {
+    font-size: 1rem;
+    line-height: 1.5;
+    height: auto;
+  }
+}
+
+/* =================
+   SMALL MOBILE STYLES (480px and below)
+   ================= */
+
+@media screen and (max-width: 480px) {
+  /* Navigation */
+ 
+  
+  .athkado, .athkado2 {
+    font-size: 1rem;
+  }
+  
+  /* Hero Section */
+  #herosec {
+    font-size: 1.8rem;
+  }
+  
+  /* About Section */
+  .turning-ideas-into-container {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    height: auto;
+  }
+  
+  .athkado-based-in {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  /* Process Section */
+  .empty-service-name {
+    font-size: 1.2rem;
+  }
+  
+  .digital-marketing2 {
+    font-size: 1rem;
+  }
+  
+  .what-its-crafting {
+    font-size: 0.8rem;
+  }
+  
+  /* Services Cards */
+  .heading-3-container {
+    font-size: 1.2rem;
+    height: auto;
+  }
+  
+  .responsive-engaging-apps-container {
+    font-size: 0.8rem;
+    height: auto;
+  }
+  
+  /* Footer Social Links */
+  .card14 {
+    height: auto;
+    padding: 0.8rem;
+  }
+  
+  .social-links {
+    width: 100%;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  
+  .heading-315 {
+    font-size: 0.9rem;
+    height: auto;
+  }
+  
+  .artistic-official {
+    font-size: 0.8rem;
+    height: auto;
+  }
+}
+
+/* =================
+   FIX FOR SPECIFIC ISSUES
+   ================= */
+
+/* Fix for values section card padding */
+@media screen and (max-width: 767px) {
+  .service-bgsvg-fill-inner {
+    padding: 1rem;
+  }
+  
+  .component-7container-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .heading-310 {
+    font-size: 1.2rem;
+  }
+  
+  .expanding-our-reach1,
+  .expanding-our-reach2,
+  .expanding-our-reach4 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Fix for process accordion */
+@media screen and (max-width: 767px) {
+  .border2.active {
+    height: auto;
+    min-height: 12rem;
+  }
+  
+  .border2.active .what-its-crafting {
+    height: auto;
+    min-height: 3rem;
+    padding: 0.8rem;
+  }
+  
+  .heading-2-button1 {
+    padding: 1rem;
+    gap: 0.8rem;
+    height: auto;
+  }
+}
+
+/* Fix for background videos */
+@media screen and (max-width: 767px) {
+  .background-video {
+    object-position: center;
+  }
+}
+
+/* Fix for mobile nav positioning */
+@media screen and (max-width: 767px) {
+  .mobile-nav {
+    top: 60px;
+    right: 0;
+    width: 70%;
+  }
+}

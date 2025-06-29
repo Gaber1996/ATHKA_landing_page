@@ -1,0 +1,583 @@
+/* Simple Footer Section CSS Styles - Clean & Minimal - MOBILE OPTIMIZED */
+
+/* Layout/Structure Classes - ENHANCED MOBILE RESPONSIVE */
+.footer-content-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1.5rem 2rem 1rem; /* Increased padding for better mobile spacing */
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--gaber1996githubio-roboto-regular-20-size);
+  color: var(--color-paleturquoise);
+  font-family: var(--gaber1996githubio-roboto-regular-16);
+  background: rgba(5, 28, 77, 0.95);
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem; /* Increased gap for better spacing */
+}
+
+/* Simple Divider Line */
+.footer-content-child {
+  align-self: stretch;
+  height: 1px;
+  background: rgba(104, 209, 223, 0.3);
+  border: none;
+}
+
+.footer-info {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.2rem; /* Increased gap */
+  max-width: 100%;
+}
+
+/* Simple Brand Section - ENHANCED */
+.testpng-parent {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; /* Increased gap */
+}
+
+.testpng-icon1 {
+  height: 3.5rem; /* Increased size */
+  width: 20rem;
+  object-fit: cover;
+}
+
+.athkado-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.athkado2 {
+  font-size: 1.1rem; /* Increased size */
+  font-weight: 600;
+  color: var(--gaber1996githubio-white);
+}
+
+/* ENHANCED Footer Links - HORIZONTAL SOCIAL CARDS */
+.footer-links {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+  max-width: 100%;
+  color: var(--gaber1996githubio-white);
+}
+
+/* Simple Description - ENHANCED */
+.footer-description {
+  flex: 1;
+  min-width: 280px;
+  font-size: 0.6rem; /* Slightly increased */
+}
+
+.lets-connect-and1 {
+  line-height: 1.5; /* Improved line height */
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem; /* Increased size */
+}
+
+/* HORIZONTAL SOCIAL CARDS CONTAINER */
+.social-cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Simple Social Media Cards - ENHANCED FOR HORIZONTAL LAYOUT */
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card14 {
+  width: 250px; /* Optimized width for horizontal layout */
+  border-radius: 0.8rem; /* Increased border radius */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem; /* Increased padding */
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card14:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(104, 209, 223, 0.3);
+  transform: translateY(-2px); /* Added hover effect */
+}
+
+.social-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8rem; /* Increased gap */
+}
+
+.social-icons {
+  height: 1.8rem; /* Increased size */
+  width: 1.8rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.social-names {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.2rem; /* Increased gap */
+}
+
+.heading-315 {
+  margin: 0;
+  font-size: 0.85rem; /* Increased size */
+  font-weight: 600;
+  color: var(--gaber1996githubio-white);
+}
+
+.artistic-official {
+  font-size: 0.7rem; /* Increased size */
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Simple Contact Information - ENHANCED */
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Increased gap */
+  padding: 1rem 0; /* Increased padding */
+  max-width: 100%;
+  font-size: 0.8rem; /* Increased size */
+  color: var(--gaber1996githubio-white);
+}
+
+.contact-info,
+.contact-info1,
+.phone-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6rem; /* Increased gap */
+}
+
+.contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.component-2-icon,
+.component-2-icon1 {
+  width: 1rem; /* Increased size */
+  height: 1rem;
+}
+
+.email-infoathkadocom-container,
+.phone-966-container {
+  line-height: 1.4; /* Improved line height */
+  font-size: 0.75rem; /* Increased size */
+}
+
+.phone-number-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem; /* Increased gap */
+}
+
+.infoathkadocom {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Simple Link Styling */
+.footer-content a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: var(--color-cyan-64);
+}
+
+/* ENHANCED MOBILE RESPONSIVE DESIGN - HORIZONTAL SOCIAL CARDS */
+@media screen and (max-width: 768px) {
+  .footer-content-wrapper {
+    padding: 2rem 1.5rem 1rem; /* Increased mobile padding */
+  }
+  
+  .footer-content {
+    gap: 2rem; /* Increased mobile gap */
+  }
+  
+  .footer-info {
+    gap: 1.5rem; /* Increased mobile gap */
+  }
+  
+  .testpng-parent {
+    gap: 1rem; /* Increased mobile gap */
+    justify-content: center; /* Center brand on mobile */
+    width: 100%;
+  }
+  
+  .athkado2 {
+    font-size: 1.2rem; /* Larger on mobile */
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 1.5rem; /* Increased mobile gap */
+    align-items: center; /* Center content on mobile */
+    text-align: center; /* Center text on mobile */
+  }
+  
+  .footer-description {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    text-align: center; /* Center description on mobile */
+  }
+  
+  .lets-connect-and1 {
+    font-size: 1rem; /* Larger on mobile */
+    line-height: 1.6; /* Better line height */
+    text-align: center; /* Center text */
+  }
+  
+  /* MOBILE: KEEP SOCIAL CARDS HORIZONTAL - SIDE BY SIDE */
+  .social-cards-container {
+    flex-direction: row; /* FORCE HORIZONTAL ON MOBILE */
+    gap: 0.8rem; /* Smaller gap for mobile */
+    width: 100%;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+  
+  .card14 {
+    width: 180px; /* SMALLER WIDTH FOR MOBILE HORIZONTAL */
+    max-width: 180px; /* Limit max width on mobile */
+    padding: 0.8rem; /* Reduced mobile padding for smaller cards */
+    margin: 0; /* Remove auto margin */
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+  
+  .social-links {
+    gap: 0.6rem; /* Smaller gap for mobile */
+  }
+  
+  .social-icons {
+    height: 1.4rem; /* Smaller on mobile for horizontal layout */
+    width: 1.4rem;
+  }
+  
+  .heading-315 {
+    font-size: 0.7rem; /* Smaller on mobile for horizontal layout */
+    line-height: 1.2; /* Tighter line height */
+  }
+  
+  .artistic-official {
+    font-size: 0.6rem; /* Smaller on mobile for horizontal layout */
+  }
+  
+  .contact {
+    flex-direction: column;
+    gap: 1.5rem; /* Increased mobile gap */
+    padding: 1.5rem 0; /* Increased mobile padding */
+  }
+  
+  .contact-info,
+  .contact-info1,
+  .phone-number {
+    gap: 0.8rem; /* Increased mobile gap */
+  }
+  
+  .component-2-icon,
+  .component-2-icon1 {
+    width: 1.2rem; /* Larger on mobile */
+    height: 1.2rem;
+  }
+  
+  .email-infoathkadocom-container,
+  .phone-966-container {
+    font-size: 0.85rem; /* Larger on mobile */
+    text-align: center; /* Center text */
+  }
+}
+
+/* TABLET AND LARGER: Keep social cards horizontal */
+@media screen and (min-width: 769px) {
+  .social-cards-container {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card14 {
+    width: 280px;
+    flex-shrink: 0;
+  }
+}
+
+/* SMALL MOBILE: STILL HORIZONTAL BUT EVEN SMALLER */
+@media screen and (max-width: 480px) {
+  .footer-content-wrapper {
+    padding: 1.5rem 1rem 0.8rem; /* Optimized small mobile padding */
+  }
+  
+  .footer-content {
+    gap: 1.5rem; /* Optimized small mobile gap */
+  }
+  
+  .footer-info {
+    gap: 1.2rem; /* Optimized small mobile gap */
+  }
+  
+  .testpng-parent {
+    gap: 0.8rem;
+  }
+  
+  .testpng-icon1 {
+    height: 1.5rem; /* Adjusted for small mobile */
+    width: 1.5rem;
+  }
+  
+  .athkado2 {
+    font-size: 1.1rem; /* Adjusted for small mobile */
+  }
+  
+  .lets-connect-and1 {
+    font-size: 0.9rem; /* Adjusted for small mobile */
+    line-height: 1.5;
+  }
+  
+  /* SMALL MOBILE: EVEN SMALLER HORIZONTAL CARDS */
+  .social-cards-container {
+    flex-direction: row; /* STILL HORIZONTAL */
+    gap: 0.5rem; /* Even smaller gap */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on very small screens */
+  }
+  
+  .card14 {
+    width: 150px; /* EVEN SMALLER WIDTH FOR SMALL MOBILE */
+    max-width: 150px; /* Smaller max width */
+    padding: 0.6rem; /* Smaller padding */
+  }
+  
+  .social-icons {
+    height: 1.2rem; /* Smaller for small mobile */
+    width: 1.2rem;
+  }
+  
+  .heading-315 {
+    font-size: 0.65rem; /* Smaller for small mobile */
+    line-height: 1.1;
+  }
+  
+  .artistic-official {
+    font-size: 0.55rem; /* Smaller for small mobile */
+  }
+  
+  .contact {
+    gap: 1.2rem; /* Adjusted small mobile gap */
+    padding: 1.2rem 0; /* Adjusted small mobile padding */
+  }
+  
+  .contact-info,
+  .contact-info1,
+  .phone-number {
+    gap: 0.6rem; /* Adjusted small mobile gap */
+  }
+  
+  .component-2-icon,
+  .component-2-icon1 {
+    width: 1rem; /* Adjusted for small mobile */
+    height: 1rem;
+  }
+  
+  .email-infoathkadocom-container,
+  .phone-966-container {
+    font-size: 0.8rem; /* Adjusted for small mobile */
+  }
+}
+
+/* Extra Small Mobile - STILL HORIZONTAL */
+@media screen and (max-width: 360px) {
+  .footer-content-wrapper {
+    padding: 1.2rem 0.8rem 0.6rem;
+  }
+  
+  /* EXTRA SMALL: HORIZONTAL BUT VERY COMPACT */
+  .social-cards-container {
+    flex-direction: row; /* STILL HORIZONTAL */
+    gap: 0.3rem; /* Very small gap */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping if absolutely necessary */
+  }
+  
+  .card14 {
+    width: 120px; /* VERY SMALL WIDTH */
+    max-width: 120px;
+    padding: 0.5rem; /* Very small padding */
+  }
+  
+  .social-icons {
+    height: 1rem; /* Very small icons */
+    width: 1rem;
+  }
+  
+  .heading-315 {
+    font-size: 0.6rem; /* Very small text */
+    line-height: 1.1;
+  }
+  
+  .artistic-official {
+    font-size: 0.5rem; /* Very small text */
+  }
+  
+  .lets-connect-and1 {
+    font-size: 0.85rem;
+  }
+  
+  .email-infoathkadocom-container,
+  .phone-966-container {
+    font-size: 0.75rem;
+  }
+}
+
+/* Landscape orientation on mobile - HORIZONTAL LAYOUT */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .footer-content-wrapper {
+    padding: 1rem 2rem 0.8rem;
+  }
+  
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .social-cards-container {
+    flex-direction: row; /* HORIZONTAL IN LANDSCAPE */
+    gap: 1rem;
+  }
+  
+  .card14 {
+    width: 160px; /* Medium size for landscape */
+    max-width: 160px;
+  }
+  
+  .contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+/* Accessibility */
+.card14:focus-within,
+.contact a:focus {
+  outline: 2px solid var(--color-cyan-64);
+  outline-offset: 2px;
+}
+
+/* Copyright section styling */
+.athka-it-solutions {
+  font-size: 0.85rem; /* Increased size */
+  margin-top: 0.8rem; /* Increased margin */
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 0; /* Added padding */
+}
+
+.footer {
+  background-color: rgb(5, 23, 62);
+}
+
+/* Enhanced hover effects */
+.card14:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content a:hover {
+  color: var(--color-cyan-64);
+  text-shadow: 0 0 8px rgba(104, 209, 223, 0.3);
+}
+
+/* Improved touch targets for mobile */
+@media screen and (max-width: 768px) {
+  .card14 {
+    min-height: 60px; /* Ensure adequate touch target for horizontal layout */
+  }
+  
+  .contact-info,
+  .contact-info1,
+  .phone-number {
+    min-height: 44px; /* Ensure adequate touch target */
+    align-items: center;
+  }
+}
+
+/* Force proper layout on mobile */
+@media screen and (max-width: 768px) {
+  .footer-content-wrapper {
+    min-height: auto !important;
+    height: auto !important;
+  }
+  
+  .footer-content {
+    min-height: auto !important;
+    height: auto !important;
+  }
+  
+  .footer-links {
+    min-height: auto !important;
+    height: auto !important;
+  }
+}
+
+/* CRITICAL: Ensure horizontal layout is maintained */
+@media screen and (max-width: 768px) {
+  .social-cards-container {
+    flex-direction: row !important; /* Force horizontal */
+    flex-wrap: wrap !important; /* Allow wrapping if needed */
+    justify-content: center !important; /* Center the cards */
+  }
+  
+  .card14 {
+    flex-shrink: 0 !important; /* Prevent shrinking */
+    flex-grow: 0 !important; /* Prevent growing */
+  }
+}

@@ -1,0 +1,662 @@
+/* Text Styling Classes */
+.turning {
+  font-weight: 300;
+}
+
+.ideas1 {
+  color: var(--color-cyan-64);
+  font-weight: 700;
+}
+
+.span {
+  color: var(--color-cyan-64);
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+  position: relative;
+}
+
+
+
+@keyframes underlineGlow {
+  0% { opacity: 0.6; transform: scaleX(1); }
+  100% { opacity: 0.8; transform: scaleX(1.05); }
+}
+
+.card9:hover .heading-310 {
+  text-shadow: 0 0 25px rgba(104, 209, 223, 0.6);
+  transform: translateX(5px);
+}
+
+.card9:hover .expanding-our-reach1,
+.card9:hover .expanding-our-reach2,
+.card9:hover .expanding-our-reach4 {
+  color: rgba(255, 255, 255, 0.95);
+  transform: translateX(5px);
+}
+
+/* Values Section CSS - MATCHING MISSION DESIGN */
+
+/* Main Container - OPTIMIZED */
+.content-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 80vh;
+  background: linear-gradient(135deg, rgba(5, 28, 77, 0.98) 0%, rgba(8, 30, 77, 0.95) 100%);
+  color: var(--gaber1996githubio-white);
+  font-family: var(--gaber1996githubio-roboto-regular-16);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* MODERN GEOMETRIC BACKGROUND PATTERN */
+.content-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Modern geometric grid */
+    linear-gradient(90deg, rgba(104, 209, 223, 0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(104, 209, 223, 0.03) 1px, transparent 1px),
+    
+    /* Diagonal accent lines */
+    linear-gradient(45deg, transparent 48%, rgba(104, 209, 223, 0.05) 49%, rgba(104, 209, 223, 0.05) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(104, 209, 223, 0.03) 49%, rgba(104, 209, 223, 0.03) 51%, transparent 52%),
+    
+    /* Corner highlights */
+    radial-gradient(circle at 15% 15%, rgba(104, 209, 223, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(104, 209, 223, 0.06) 0%, transparent 40%);
+    
+  background-size: 
+    60px 60px,
+    60px 60px,
+    120px 120px,
+    120px 120px,
+    100% 100%,
+    100% 100%;
+    
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* FLOATING GEOMETRIC ELEMENTS */
+.content-frame::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+  background: 
+    linear-gradient(45deg, rgba(104, 209, 223, 0.1) 0%, transparent 70%),
+    conic-gradient(from 0deg, rgba(104, 209, 223, 0.05), transparent, rgba(104, 209, 223, 0.05));
+  border-radius: 50%;
+  animation: floatGeometry 8s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes floatGeometry {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateY(-30px) rotate(180deg) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* Content Wrapper - OPTIMIZED */
+.content6 {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.content7 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* MATCHING MISSION DESIGN - Left Side Header */
+.header3 {
+  flex: 1;
+  max-width: 500px;
+  padding-right: 1rem;
+  position: relative;
+}
+
+/* MISSION-STYLE CARD CONTAINER */
+.mission {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  z-index: 2;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.015) 0%,
+    rgba(255, 255, 255, 0.003) 50%,
+    rgba(104, 209, 223, 0.01) 100%
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 2rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.12);
+  transition: all 0.6s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Modern card hover effect */
+.mission::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(104, 209, 223, 0.05) 0%,
+    transparent 50%,
+    rgba(104, 209, 223, 0.03) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border-radius: 3rem;
+}
+
+.mission:hover {
+  transform: translateY(-1rem);
+  border-color: rgba(104, 209, 223, 0.3);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.4);
+}
+
+.mission:hover::before {
+  opacity: 1;
+}
+
+/* MISSION-STYLE HEADER SECTION */
+.success-story-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* Modern decorative element for the header */
+.success-story-heading::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 3rem;
+  background: linear-gradient(180deg, var(--color-cyan-64) 0%, rgba(104, 209, 223, 0.3) 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+}
+
+.success-story-heading::after {
+  content: '';
+  position: absolute;
+  right: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid var(--color-cyan-64);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  filter: drop-shadow(0 0 10px rgba(104, 209, 223, 0.4));
+}
+
+.mask-group-icon3 {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+  z-index: 5;
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(104, 209, 223, 0.3));
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); filter: brightness(1.3) drop-shadow(0 0 8px rgba(104, 209, 223, 0.3)); }
+  50% { transform: scale(1.05); filter: brightness(1.5) drop-shadow(0 0 12px rgba(104, 209, 223, 0.5)); }
+}
+
+.heading-26 {
+  position: relative;
+  letter-spacing: 0.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-cyan-64) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.3);
+}
+
+/* MISSION-STYLE MAIN TITLE SECTION */
+.description1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: var(--font-size-31xl);
+  background: transparent !important;
+  z-index: 3;
+  position: relative;
+}
+
+.your-success-story-container1 {
+  margin: 0;
+  position: relative;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.1;
+  z-index: 4;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 800px;
+}
+
+/* STATIC IMAGE - NO ANIMATIONS */
+.instance-icon {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+  display: block;
+  position: relative;
+  /* REMOVED ALL ANIMATIONS */
+}
+
+
+
+/* Cards Container - Right Side - OPTIMIZED */
+.cards-container {
+  flex: 1;
+  max-width: 700px;
+}
+
+/* Grid Container - REDUCED GAPS */
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Card Base Styles - REDUCED PADDING */
+.card9 {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(104, 209, 223, 0.06) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: visible;
+  position: relative;
+}
+
+/* Modern card hover effect */
+.card9::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(104, 209, 223, 0.05) 0%,
+    transparent 50%,
+    rgba(104, 209, 223, 0.03) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border-radius: 1.5rem;
+  pointer-events: none;
+}
+
+.card9:hover {
+  transform: translateY(-0.5rem);
+  border-color: rgba(104, 209, 223, 0.3);
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.card9:hover::before {
+  opacity: 1;
+}
+
+/* Last card spans both columns */
+.card9:last-child {
+  grid-column: 1 / -1;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Card Content - SIMPLIFIED STRUCTURE - REDUCED PADDING */
+.service-bgsvg-fill2 {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 200px;
+}
+
+.service-bgsvg-fill-inner {
+  flex: 1;
+}
+
+.component-7svg-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.component-7container-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  filter: brightness(1.2) drop-shadow(0 0 15px rgba(104, 209, 223, 0.3));
+  transition: all 0.6s ease;
+}
+
+.card9:hover .component-7container-icon {
+  transform: scale(1.1);
+  filter: brightness(1.4) drop-shadow(0 0 20px rgba(104, 209, 223, 0.5));
+}
+
+.heading-3-creative-content-p-parent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.heading-310 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-cyan-64);
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+  margin: 0;
+  line-height: 1.3;
+  transition: all 0.6s ease;
+}
+
+.expanding-our-reach1,
+.expanding-our-reach2,
+.expanding-our-reach4 {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  display: block;
+  transition: all 0.6s ease;
+}
+
+/* Clean up unused elements */
+.backgroundborder15,
+.service-bgsvg-icon6,
+.background2,
+.background-child,
+.background-inner,
+.background-child1 {
+  display: none;
+}
+
+/* Responsive Design - COMPACT MOBILE */
+@media screen and (max-width: 1200px) {
+  .content6 {
+    gap: 1.5rem;
+  }
+  
+  .service-bgsvg-fill2 {
+    padding: 1.3rem;
+    min-height: 180px;
+  }
+  
+  .component-7container-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .heading-310 {
+    font-size: 1.2rem;
+  }
+  
+  .instance-icon {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .mission {
+    padding: 1.5rem;
+  }
+  
+  .success-story-heading::before,
+  .success-story-heading::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .content7 {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .header3 {
+    text-align: center;
+    padding-right: 0;
+    order: 1;
+  }
+  
+  .cards-container {
+    order: 2;
+    max-width: 100%;
+  }
+  
+  .mission {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-frame {
+    padding: 0.8rem;
+    min-height: 70vh;
+  }
+  
+  .container1 {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .card9:last-child {
+    grid-column: 1;
+    max-width: 100%;
+  }
+  
+  .service-bgsvg-fill2 {
+    padding: 1.2rem;
+    min-height: 160px;
+  }
+  
+  .component-7container-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+  
+  .heading-310 {
+    font-size: 1.1rem;
+  }
+  
+  .expanding-our-reach1,
+  .expanding-our-reach2,
+  .expanding-our-reach4 {
+    font-size: 0.85rem;
+  }
+  
+  .instance-icon {
+    width: 8rem;
+    height: 8rem;
+  }
+  
+  .heading-26 {
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .your-success-story-container1 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+  }
+  
+  .mission {
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-frame {
+    padding: 0.5rem;
+    min-height: 60vh;
+  }
+  
+  .service-bgsvg-fill2 {
+    padding: 1rem;
+    min-height: 140px;
+  }
+  
+  .component-7container-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .heading-310 {
+    font-size: 1rem;
+  }
+  
+  .expanding-our-reach1,
+  .expanding-our-reach2,
+  .expanding-our-reach4 {
+    font-size: 0.8rem;
+  }
+  
+  .heading-26 {
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+  }
+  
+  .instance-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .your-success-story-container1 {
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+  }
+  
+  .container1 {
+    gap: 1rem;
+  }
+  
+  .mission {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+}
+
+/* Force visibility */
+.content-frame,
+.content6,
+.content7,
+.header3,
+.cards-container,
+.container1 {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Accessibility */
+.card9:focus-within {
+  outline: 2px solid var(--color-cyan-64);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support - ENHANCED TO REMOVE IMAGE ANIMATIONS */
+@media (prefers-reduced-motion: reduce) {
+  .card9,
+  .component-7container-icon,
+  .instance-icon,
+  .mask-group-icon3 {
+    transition: none;
+    animation: none !important;
+  }
+  
+  .card9:hover {
+    transform: none;
+  }
+  
+  .card9:hover .component-7container-icon {
+    transform: none;
+  }
+  
+  .instance-icon:hover {
+    transform: none;
+  }
+  
+  .mission:hover {
+    transform: none;
+  }
+}
+
+/* FORCE STATIC IMAGE - NO ANIMATIONS EVER */
+.instance-icon {
+  animation: none !important;
+  transition: none !important;
+}
+
+.instance-icon:hover {
+  transform: none !important;
+  animation: none !important;
+}
+
+.instance-icon::before,
+.instance-icon::after {
+  display: none !important;
+}
