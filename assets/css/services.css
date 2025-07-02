@@ -1,0 +1,1173 @@
+/* Services Section CSS Styles - Compact Version */
+
+/* Main Structure Classes - Reduced Spacing */
+.frame-parent2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0vw 2vw 3vw; /* Reduced from 5.47vw */
+  box-sizing: border-box;
+  gap: 2rem; /* Reduced from 4rem */
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-7xl);
+  color: var(--gaber1996githubio-white);
+  font-family: var(--gaber1996githubio-roboto-regular-16);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Simple modern background with static geometric lines */
+.frame-parent2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 97%, rgba(104, 209, 223, 0.1) 98%, rgba(104, 209, 223, 0.1) 100%),
+    linear-gradient(-45deg, transparent 97%, rgba(104, 209, 223, 0.06) 98%, rgba(104, 209, 223, 0.06) 100%),
+    linear-gradient(90deg, transparent 99%, rgba(104, 209, 223, 0.08) 100%),
+    linear-gradient(0deg, transparent 99%, rgba(104, 209, 223, 0.05) 100%),
+    radial-gradient(circle at 25% 25%, rgba(104, 209, 223, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(104, 209, 223, 0.02) 0%, transparent 50%);
+  background-size: 
+    200px 200px,
+    200px 200px,
+    150px 150px,
+    150px 150px,
+    100% 100%,
+    100% 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.frame-parent2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 15%, rgba(104, 209, 223, 0.04) 15.5%, rgba(104, 209, 223, 0.04) 16%, transparent 16.5%),
+    linear-gradient(90deg, transparent 85%, rgba(104, 209, 223, 0.03) 85.5%, rgba(104, 209, 223, 0.03) 86%, transparent 86.5%),
+    linear-gradient(0deg, transparent 30%, rgba(104, 209, 223, 0.05) 30.5%, rgba(104, 209, 223, 0.05) 31%, transparent 31.5%),
+    linear-gradient(0deg, transparent 70%, rgba(104, 209, 223, 0.03) 70.5%, rgba(104, 209, 223, 0.03) 71%, transparent 71.5%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.frame-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  width: 100%;
+  z-index: 1;
+}
+
+.frame-parent3 {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem; /* Reduced from 4rem */
+  margin: 0 auto;
+}
+
+.frame-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Compact Header Section */
+.success-story-content-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Reduced from 3rem */
+  flex-shrink: 0;
+  max-width: 100%;
+  width: 100%;
+  padding: 1rem 0; /* Reduced from 2rem */
+}
+
+.success-story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all content */
+  justify-content: center;
+  gap: 1.5rem; /* Reduced from 2.5rem */
+  min-width: 500px;
+  max-width: 600px;
+  position: relative;
+  text-align: center; /* Center text content */
+}
+
+
+.success-story-heading-content-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center content */
+  justify-content: center; /* Center content */
+  max-width: 100%;
+}
+
+.success-story-heading-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
+  justify-content: center; /* Center content */
+  padding: 0;
+  box-sizing: border-box;
+  gap: 1rem; /* Reduced from 2rem */
+  max-width: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+.success-story-mask {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content */
+  justify-content: center;
+  gap: 1rem; /* Reduced from 1.5rem */
+  text-align: center;
+}
+
+.success-story-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center the heading */
+  padding: 0;
+  gap: 1rem;
+  position: relative;
+}
+
+.success-story-heading::after {
+  content: '';
+  position: absolute;
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid var(--color-cyan-64);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  filter: drop-shadow(0 0 10px rgba(104, 209, 223, 0.4));
+}
+
+/* Compact Main Title */
+.your-success-story-container {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: clamp(2rem, 3.5vw, 2.8rem); /* Reduced size */
+  line-height: 1.1;
+  text-align: center; /* Center the title */
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-cyan-64) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heading-21 {
+  position: relative;
+  letter-spacing: 0.2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem; /* Reduced from 1rem */
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-cyan-64) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.3);
+  text-align: center;
+}
+
+.turning {
+  font-weight: 300;
+}
+
+.agile {
+  font-weight: 700;
+  color: var(--color-cyan-64);
+  position: relative;
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+}
+
+
+
+/* Fix for AthkaDo brand name - .ideas1 class */
+.ideas1 {
+  font-weight: 700;
+  color: var(--color-cyan-64) !important;
+  position: relative;
+  text-shadow: 
+    0 0 10px rgba(104, 209, 223, 0.5),
+    0 0 20px rgba(104, 209, 223, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+  /* Ensure visibility with solid color fallback */
+  background: var(--color-cyan-64);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Fallback for browsers that don't support background-clip */
+  -webkit-text-stroke: 0.5px rgba(104, 209, 223, 0.8);
+}
+
+
+
+@keyframes underlineGlow {
+  0% { opacity: 0.6; transform: scaleX(1); }
+  100% { opacity: 0.8; transform: scaleX(1.05); }
+}
+
+.our-digital-services-container {
+  width: 100%;
+  position: relative;
+  line-height: 1.6; /* Reduced from 1.8 */
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  font-size: 1rem; /* Reduced from 1.1rem */
+  opacity: 0.95;
+  padding: 1rem; /* Reduced from 1.5rem */
+  background: linear-gradient(90deg, rgba(104, 209, 223, 0.05) 0%, transparent 100%);
+  border-left: 3px solid rgba(104, 209, 223, 0.3);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.our-digital-services-container1 {
+  width: 100%;
+}
+
+.our-digital-services {
+  margin: 0;
+  padding: 0.3rem 0; /* Reduced from 0.5rem */
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the description */
+  justify-content: center;
+  gap: 1.5rem; /* Reduced from 2rem */
+  max-width: 500px;
+  text-align: center; /* Center text */
+  font-size: var(--gaber1996githubio-roboto-regular-20-size);
+}
+
+/* Compact Button - Centered on all screens */
+.get-in-touch-parent {
+  width: auto;
+  min-width: 240px; /* Reduced from 280px */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem; /* Reduced from 1.2rem 3rem */
+  box-sizing: border-box;
+  gap: 0.8rem; /* Reduced from 1rem */
+  font-size: var(--gaber1996githubio-roboto-regular-16-size);
+  background: transparent;
+  border: 2px solid rgba(104, 209, 223, 0.4);
+  border-radius: 3rem;
+  color: var(--color-cyan-64);
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0.8rem 2.5rem rgba(104, 209, 223, 0.15);
+  margin: 1.5rem auto 0 auto; /* Center button on all screens */
+}
+
+.get-in-touch-parent::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--color-cyan-64);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.get-in-touch-parent:hover {
+  color: var(--dark-bg);
+  border-color: var(--color-cyan-64);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1.5rem 3rem rgba(104, 209, 223, 0.25);
+}
+
+.get-in-touch-parent:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.get-in-touch {
+  height: auto;
+  width: auto;
+  position: relative;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  z-index: 3;
+  font-size: 1rem; /* Reduced from 1.1rem */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Icon adjustments */
+.mask-group-icon {
+  height: 1.3rem; /* Reduced from 1.5rem */
+  width: 1.3rem;
+  position: relative;
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(104, 209, 223, 0.3));
+}
+
+.background-icon {
+  height: 1.8rem; /* Reduced from 2rem */
+  width: 1.8rem;
+  position: relative;
+  border-radius: var(--br-6xl);
+  transition: all 0.4s ease;
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(104, 209, 223, 0.3));
+  z-index: 3;
+}
+
+.get-in-touch-parent:hover .background-icon {
+  transform: translateX(0.5rem) rotate(180deg);
+}
+
+/* COMPACT CARD DESIGNS */
+
+.card-parent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, transparent 99%, rgba(104, 209, 223, 0.06) 100%),
+    linear-gradient(45deg, transparent 99%, rgba(104, 209, 223, 0.04) 100%);
+  background-size: 100px 100px, 100px 100px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Compact Card Grid */
+.card-parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Reduced from 380px */
+  gap: 2rem; /* Reduced from 3rem */
+  padding: 1rem 0; /* Reduced from 2rem */
+  box-sizing: border-box;
+  max-width: 1400px;
+  width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card {
+  height: auto;
+  min-height: 350px; /* Significantly reduced from 450px */
+  width: 100%;
+  border-radius: 2rem;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(104, 209, 223, 0.05) 100%
+  );
+  backdrop-filter: blur(25px);
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 1rem 3rem rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(104, 209, 223, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  background: 
+    linear-gradient(135deg, rgba(104, 209, 223, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 70%, rgba(104, 209, 223, 0.06) 71%, rgba(104, 209, 223, 0.06) 73%, transparent 74%);
+  background-size: 100% 100%, 15px 15px;
+  border-radius: 0 2rem 0 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-0.8rem); /* Reduced from -1rem */
+  box-shadow: 
+    0 2rem 4rem rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(104, 209, 223, 0.3);
+}
+
+/* Compact Card Content */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem; /* Reduced from 2.5rem */
+  box-sizing: border-box;
+  z-index: 3;
+  gap: 1.5rem; /* Reduced from 2rem */
+  position: relative;
+}
+
+.figure-digital-features-img-parent {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 1.5rem; /* Reduced from 2rem */
+  flex-shrink: 0;
+}
+
+/* ENHANCED: Service card images - MUCH LARGER SIZE TO FILL COMPONENT */
+.figure-digital-features-img- {
+  width: 100%;
+  height: 280px !important; /* SIGNIFICANTLY INCREASED from 200px */
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain !important; /* Show full image without cropping */
+  object-position: center !important; /* Center the image */
+  z-index: 0;
+  transition: all 0.4s ease;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.05); /* Add subtle background for better contrast */
+  padding: 1rem; /* Add padding to ensure image doesn't touch edges */
+  box-sizing: border-box;
+}
+
+/* SPECIFIC FIX: Target the UI/UX image specifically - MUCH LARGER */
+img[src*="ui-ux-design-new.png"] {
+  height: 280px !important; /* SIGNIFICANTLY INCREASED */
+  object-fit: contain !important; /* Show full image without cropping */
+  object-position: center !important;
+  background: rgba(255, 255, 255, 0.1) !important; /* Better contrast for the blue image */
+  padding: 1.5rem !important; /* More padding for this specific image */
+}
+
+.card:hover .figure-digital-features-img- {
+  transform: scale(1.02); /* Reduced scale to prevent overflow */
+}
+
+/* Compact Typography */
+.heading-3-container {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: 1.3rem; /* Reduced from 1.5rem */
+  line-height: 1.2;
+  font-weight: 800;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 1;
+  color: var(--gaber1996githubio-white);
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-cyan-64) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.responsive-engaging-apps-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: 1rem; /* Reduced from 1.1rem */
+  line-height: 1.6; /* Reduced from 1.7 */
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: flex-start;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* COMPACT LARGE CARDS */
+.cards {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Reduced from 650px */
+  gap: 2.5rem; /* Reduced from 4rem */
+  padding: 2rem 0; /* Reduced from 3rem */
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(30deg, transparent 98%, rgba(104, 209, 223, 0.08) 99%, rgba(104, 209, 223, 0.08) 100%),
+    linear-gradient(-30deg, transparent 98%, rgba(104, 209, 223, 0.05) 99%, rgba(104, 209, 223, 0.05) 100%),
+    linear-gradient(90deg, transparent 95%, rgba(104, 209, 223, 0.04) 96%, rgba(104, 209, 223, 0.04) 100%);
+  background-size: 180px 180px, 180px 180px, 120px 120px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.card6,
+.card7 {
+  height: auto;
+  min-height: 450px; /* Significantly reduced from 650px */
+  flex: 1;
+  position: relative;
+  backdrop-filter: blur(30px);
+  border-radius: 3rem;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(104, 209, 223, 0.1) 100%
+  );
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 2rem 4rem rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 0 0 1px rgba(104, 209, 223, 0.15);
+}
+
+.card6::before,
+.card7::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background: 
+    linear-gradient(45deg, rgba(104, 209, 223, 0.12) 0%, transparent 60%),
+    linear-gradient(90deg, transparent 80%, rgba(104, 209, 223, 0.05) 81%, rgba(104, 209, 223, 0.05) 83%, transparent 84%),
+    linear-gradient(0deg, transparent 80%, rgba(104, 209, 223, 0.04) 81%, rgba(104, 209, 223, 0.04) 83%, transparent 84%);
+  background-size: 100% 100%, 25px 25px, 25px 25px;
+  border-radius: 3rem 0 0 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.card6:hover::before,
+.card7:hover::before {
+  opacity: 1;
+}
+
+.card6:hover,
+.card7:hover {
+  transform: translateY(-1rem); /* Reduced from -1.5rem */
+  box-shadow: 
+    0 3rem 6rem rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 0 0 1px rgba(104, 209, 223, 0.4);
+}
+
+/* Compact Large Card Content */
+.service-bgsvg-fill {
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 3rem;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem; /* Reduced from 3rem */
+  box-sizing: border-box;
+  gap: 1.5rem; /* Reduced from 2.5rem */
+  z-index: 1;
+}
+
+.content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem; /* Reduced from 2.5rem */
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  flex: 1;
+}
+
+.vrjpg-icon {
+  align-self: stretch;
+  height: 200px; /* Reduced from 280px */
+  position: relative;
+  border-radius: 2rem;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+.card6:hover .vrjpg-icon,
+.card7:hover .vrjpg-icon {
+  transform: scale(1.05);
+}
+
+.heading-35 {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: 1.7rem; /* Reduced from 2rem */
+  line-height: 1.2;
+  font-weight: 800;
+  font-family: inherit;
+  color: var(--gaber1996githubio-white);
+  text-shadow: 0 6px 25px rgba(0, 0, 0, 0.7);
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-cyan-64) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem; /* Reduced from 1.5rem */
+}
+
+.bringing-your-ideas {
+  align-self: stretch;
+  position: relative;
+  font-size: 1.1rem; /* Reduced from 1.2rem */
+  line-height: 1.5; /* Reduced from 1.6 */
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  padding: 1.2rem; /* Reduced from 1.5rem */
+  border-left: 3px solid rgba(104, 209, 223, 0.3);
+  background: linear-gradient(90deg, rgba(104, 209, 223, 0.05) 0%, transparent 100%);
+  border-radius: 0 1rem 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  display: block;
+  overflow: visible;
+  flex: 1;
+}
+
+/* Hidden background elements */
+.service-bgsvg-icon,
+.service-bgsvg-icon6,
+.backgroundborder,
+.backgroundborder1,
+.backgroundborder12,
+.backgroundborder13,
+.backgroundborder-wrapper,
+.border {
+  display: none;
+}
+
+/* Animation Classes for Services Section */
+.success-story-content,
+.description,
+.card-parent,
+.cards {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide-from-right {
+  animation: slideFromRight 1s ease-out forwards;
+  visibility: visible;
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out forwards;
+  visibility: visible;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* COMPACT RESPONSIVE DESIGN */
+@media screen and (max-width: 1200px) {
+  .frame-parent3 {
+    gap: 1.5rem;
+  }
+  
+  .success-story-content-parent {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .success-story-content {
+    min-width: auto;
+    align-items: center;
+  }
+  
+  .success-story-content::before {
+    display: none;
+  }
+  
+  .success-story-heading::after {
+    display: none;
+  }
+  
+  .card-parent {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .card6,
+  .card7 {
+    min-height: 400px;
+    overflow: hidden;
+  }
+  
+  .service-bgsvg-fill {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  /* Responsive image heights - LARGER SIZES */
+  .figure-digital-features-img- {
+    height: 240px !important; /* Increased for better visibility */
+  }
+  
+  img[src*="ui-ux-design-new.png"] {
+    height: 240px !important;
+    padding: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .frame-parent2 {
+    padding: 0 1rem 1rem; /* Reduced bottom padding from 2rem to 1rem */
+    gap: 1rem; /* Reduced from 1.5rem */
+  }
+  
+  .your-success-story-container {
+    font-size: 1.8rem; /* Reduced */
+    text-align: center;
+  }
+  
+  /* HIDE GET IN TOUCH BUTTON ON MOBILE */
+  .get-in-touch-parent {
+    display: none !important; /* Hide button completely on mobile */
+  }
+  
+  /* Reduce header section height */
+  .success-story-content-parent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 0; /* Reduced from 1rem */
+    gap: 1rem; /* Reduced from 2rem */
+  }
+  
+  .success-story-content {
+    align-items: center;
+    text-align: center;
+    gap: 1rem; /* Reduced from 1.5rem */
+  }
+  
+  .success-story-heading-content {
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem; /* Reduced from 1rem */
+  }
+  
+  .success-story-mask {
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem; /* Reduced from 1rem */
+  }
+  
+  .success-story-heading {
+    justify-content: center;
+  }
+  
+  .your-success-story-container {
+    text-align: center;
+    margin-bottom: 0.5rem; /* Add small margin to control spacing */
+  }
+  
+  .description {
+    align-items: center;
+    text-align: center;
+    gap: 1rem; /* Reduced from 1.5rem */
+  }
+  
+  .our-digital-services-container {
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid rgba(104, 209, 223, 0.3);
+    border-radius: 1rem 1rem 0 0;
+    background: linear-gradient(180deg, rgba(104, 209, 223, 0.05) 0%, transparent 100%);
+    padding: 0.8rem; /* Reduced from 1rem */
+  }
+  
+  /* MOBILE CENTERING: Center cards in mobile */
+  .card-parent {
+    grid-template-columns: 1fr;
+    gap: 1.2rem; /* Reduced from 1.5rem */
+    justify-items: center; /* Center cards horizontally */
+    padding: 0.5rem; /* Reduced from 1rem */
+  }
+  
+  .card {
+    min-height: 320px; /* Increased from 280px for larger images */
+    max-width: 400px; /* Add max width for mobile centering */
+    width: 100%;
+  }
+  
+  .card:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.2rem; /* Reduced from 1.5rem */
+    justify-items: center; /* Center large cards in mobile */
+    padding: 1rem 0; /* Reduced from 2rem */
+  }
+  
+  .card6,
+  .card7 {
+    min-height: 340px; /* Reduced from 380px */
+    overflow: hidden;
+    max-width: 500px; /* Add max width for mobile centering */
+    width: 100%;
+  }
+  
+  .service-bgsvg-fill {
+    padding: 1.5rem; /* Reduced from 1.8rem */
+    gap: 1.2rem; /* Reduced from 1.5rem */
+  }
+  
+  .bringing-your-ideas {
+    font-size: 1rem;
+    padding: 0.8rem; /* Reduced from 1rem */
+  }
+  
+  .card6:hover,
+  .card7:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .card-inner {
+    padding: 1.5rem; /* Reduced from 1.8rem */
+    gap: 1.2rem; /* Reduced from 1.5rem */
+  }
+  
+  .vrjpg-icon {
+    height: 160px; /* Reduced from 180px */
+  }
+  
+  .heading-35 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem; /* Reduced from 1rem */
+  }
+  
+  .heading-3-container {
+    font-size: 1.2rem;
+  }
+  
+  .responsive-engaging-apps-container {
+    font-size: 0.95rem;
+  }
+  
+  /* MOBILE: LARGER IMAGE SIZES */
+  .figure-digital-features-img- {
+    height: 200px !important; /* Increased from 140px for better mobile visibility */
+  }
+  
+  img[src*="ui-ux-design-new.png"] {
+    height: 200px !important;
+    padding: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .frame-parent2 {
+    padding: 0 0.8rem 0.8rem; /* Reduced bottom padding from 1.5rem to 0.8rem */
+    gap: 0.8rem; /* Reduced from 1rem */
+  }
+  
+  .success-story-content {
+    min-width: auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem; /* Reduced spacing */
+  }
+  
+  .your-success-story-container {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 0.4rem; /* Smaller margin */
+  }
+  
+  /* HIDE GET IN TOUCH BUTTON ON SMALL MOBILE */
+  .get-in-touch-parent {
+    display: none !important; /* Keep button hidden on small screens */
+  }
+  
+  /* Reduce header spacing for small screens */
+  .success-story-content-parent {
+    padding: 0.3rem 0; /* Reduced padding */
+    gap: 0.8rem; /* Reduced gap */
+  }
+  
+  .success-story-heading-content {
+    gap: 0.6rem; /* Reduced gap */
+  }
+  
+  .success-story-mask {
+    gap: 0.6rem; /* Reduced gap */
+  }
+  
+  .description {
+    gap: 0.8rem; /* Reduced gap */
+  }
+  
+  .our-digital-services-container {
+    padding: 0.6rem; /* Reduced padding */
+  }
+  
+  /* MOBILE CENTERING: Enhanced centering for small screens */
+  .card-parent {
+    padding: 0.3rem; /* Reduced from 0.5rem */
+    justify-items: center;
+    gap: 1rem; /* Reduced from default */
+  }
+  
+  .card {
+    min-height: 300px; /* Increased from 260px for larger images */
+    max-width: 350px; /* Smaller max width for small screens */
+  }
+  
+  .card6,
+  .card7 {
+    min-height: 320px; /* Reduced from 360px */
+    overflow: hidden;
+    max-width: 400px; /* Smaller max width for small screens */
+  }
+  
+  .cards {
+    padding: 0.8rem 0; /* Reduced padding */
+    gap: 1rem; /* Reduced gap */
+  }
+  
+  .service-bgsvg-fill {
+    padding: 1.2rem; /* Reduced from 1.5rem */
+    gap: 1rem; /* Reduced from 1.2rem */
+  }
+  
+  .bringing-your-ideas {
+    font-size: 0.95rem;
+    padding: 0.8rem; /* Reduced from 1rem */
+  }
+  
+  .card-inner {
+    padding: 1.2rem; /* Reduced from 1.5rem */
+    gap: 1rem; /* Reduced gap */
+  }
+  
+  .vrjpg-icon {
+    height: 140px; /* Reduced from 160px */
+  }
+  
+  .heading-35 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem; /* Reduced margin */
+  }
+  
+  .background-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  /* SMALL MOBILE: LARGER IMAGE SIZES */
+  .figure-digital-features-img- {
+    height: 180px !important; /* Increased from 120px for better small mobile visibility */
+  }
+  
+  img[src*="ui-ux-design-new.png"] {
+    height: 180px !important;
+    padding: 0.8rem !important;
+  }
+}
+
+/* Accessibility improvements */
+.get-in-touch-parent:focus {
+  outline: 3px solid var(--color-cyan-64);
+  outline-offset: 4px;
+}
+
+.card:focus-within,
+.card6:focus-within,
+.card7:focus-within {
+  outline: 2px solid var(--color-cyan-64);
+  outline-offset: 2px;
+}
+
+/* Performance optimizations */
+.card,
+.card6,
+.card7 {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card6,
+  .card7,
+  .get-in-touch-parent,
+  .background-icon,
+  .mask-group-icon {
+    transition: none;
+    animation: none !important;
+  }
+  
+  .card:hover,
+  .card6:hover,
+  .card7:hover {
+    transform: none !important;
+  }
+  
+  .get-in-touch-parent:hover .background-icon {
+    transform: none;
+  }
+  
+  .agile::after,
+  .ideas1::after {
+    animation: none;
+  }
+  
+  .card::before,
+  .card6::before,
+  .card7::before {
+    transition: none;
+  }
+  
+  .card:hover::before,
+  .card6:hover::before,
+  .card7:hover::before {
+    opacity: 0.8 !important;
+  }
+}

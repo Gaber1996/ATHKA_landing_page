@@ -1,0 +1,485 @@
+/* Hero Section Styles - CENTERED LAYOUT */
+
+.earth-planet-1920x1080-parent {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.25;
+    /* ENHANCED VIDEO PLAYBACK FIXES */
+    pointer-events: none;
+    user-select: none;
+    /* Ensure video covers the entire container */
+    min-width: 100%;
+    min-height: 100%;
+    /* Force hardware acceleration */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    /* Ensure video is behind content */
+    isolation: isolate;
+    /* CRITICAL: Force video to load and play */
+    will-change: opacity;
+}
+
+/* Video playing state */
+.background-video.playing {
+    opacity: 0.25;
+}
+
+/* Video container states */
+.earth-planet-1920x1080-parent.video-playing .background-video {
+    opacity: 0.25;
+}
+
+.earth-planet-1920x1080-parent.video-blocked::before,
+.earth-planet-1920x1080-parent.video-error::before {
+    opacity: 1;
+    z-index: 0;
+}
+
+/* ENHANCED: Force video autoplay with JavaScript fallback */
+.background-video[autoplay] {
+    /* Ensure autoplay attribute is respected */
+    opacity: 0.25;
+}
+
+/* FALLBACK: If video fails to load, show a gradient background */
+.earth-planet-1920x1080-parent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(5, 28, 77, 0.9) 0%,
+        rgba(8, 30, 77, 0.8) 50%,
+        rgba(5, 33, 104, 0.7) 100%
+    );
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* Apply fallback when video error occurs */
+.earth-planet-1920x1080-parent.video-error::before {
+    opacity: 1;
+    z-index: 0;
+}
+
+/* Hero Container - CENTERED */
+.hero-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Changed from flex-start to center */
+    padding: 0 5%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    margin-top: 9%;
+}
+
+.hero-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Changed from flex-start to center */
+    justify-content: center;
+    padding: 7rem 0;
+    text-align: center; /* Added center text alignment */
+}
+
+.hero-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+    width: 100%;
+    max-width: 1400px;
+    text-align: center; /* Changed from left to center */
+}
+
+/* Hero Typography - CENTERED */
+#herosec {
+    font-size: min(3rem, 4.5vw);
+    font-weight: 700;
+    color: var(--color-text-light);
+    margin-bottom: 3.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    max-width: 1200px;
+    margin-left: auto; /* Changed from 0 to auto */
+    margin-right: auto;
+    text-align: center; /* Added center alignment */
+}
+
+#herosecwords {
+    font-size: min(1.5rem, 2.5vw);
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto; /* Changed from 0 to auto */
+    margin-right: auto;
+    text-align: center; /* Added center alignment */
+}
+
+.highlight {
+    color: var(--color-cyan-64);
+    position: relative;
+    display: inline-block;
+}
+
+
+
+/* Modern CTA Button - CENTERED */
+.hero-cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.15);
+    animation: buttonPulse 2s infinite;
+    width: 220px;
+    white-space: nowrap;
+    margin-left: auto; /* Changed from 0 to auto */
+    margin-right: auto; /* Added for center alignment */
+}
+
+.hero-cta-button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 50%);
+    border-radius: 100px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.hero-cta-button::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.75s ease;
+}
+
+.hero-cta-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(52, 152, 219, 0.25);
+    border-color: rgba(255, 255, 255, 0.2);
+    animation: none;
+}
+
+.hero-cta-button:hover::before {
+    opacity: 1;
+}
+
+.hero-cta-button:hover::after {
+    left: 200%;
+}
+
+.hero-cta-button:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+.background-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(1.1);
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.hero-cta-button:hover .background-icon {
+    transform: translateX(4px) rotate(45deg);
+    animation: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+    }
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Responsive Design - MAINTAINING CENTER ALIGNMENT */
+@media screen and (max-width: 1440px) {
+    /* Removed padding-right adjustment for center alignment */
+    
+    .hero-container {
+        padding: 0 10%;
+    }
+    
+    #herosec {
+        font-size: min(3.5rem, 4vw);
+        max-width: 1000px;
+    }
+    
+    #herosecwords {
+        font-size: 1.3rem;
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* MOBILE HEIGHT ADJUSTMENTS */
+    .earth-planet-1920x1080-parent {
+        height: 70vh; /* Reduced from 100vh */
+        min-height: 600px; /* Minimum height for very short screens */
+    }
+    
+    .hero-container {
+        padding: 0 1.5rem;
+        height: 70vh; /* Reduced from 100vh */
+        margin-top: 5%; /* Reduced from 9% */
+    }
+    
+    .hero-content {
+        padding: 2rem 0; /* Reduced from 4rem */
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    #herosec {
+        font-size: 2.5rem;
+        margin: 0 auto 1.5rem;
+    }
+    
+    #herosecwords {
+        font-size: 1rem;
+        margin: 0 auto 2rem;
+    }
+    
+    .hero-cta-button {
+        padding: 0.75rem 1.75rem;
+        font-size: 0.95rem;
+        width: 180px;
+        margin: 0 auto;
+    }
+    
+    .background-icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+    
+    /* MOBILE: Reduce video opacity for better text readability */
+    .background-video {
+        opacity: 0.15;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* SMALLER MOBILE HEIGHT ADJUSTMENTS */
+    .earth-planet-1920x1080-parent {
+        height: 65vh; /* Further reduced for small screens */
+        min-height: 550px;
+    }
+    
+    .hero-container {
+        padding: 0 1rem;
+        height: 65vh; /* Further reduced */
+        margin-top: 3%; /* Further reduced */
+    }
+    
+    .hero-content {
+        padding: 1.5rem 0; /* Further reduced */
+    }
+    
+    #herosec {
+        font-size: 2rem;
+        margin-bottom: 1rem; /* Reduced spacing */
+    }
+    
+    #herosecwords {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem; /* Reduced spacing */
+    }
+    
+    .hero-cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+        width: 160px;
+    }
+    
+    .background-icon {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    /* SMALL MOBILE: Further reduce video opacity */
+    .background-video {
+        opacity: 0.1;
+    }
+}
+
+/* LANDSCAPE MOBILE OPTIMIZATION */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .earth-planet-1920x1080-parent {
+        height: 100vh; /* Full height in landscape */
+    }
+    
+    .hero-container {
+        height: 100vh;
+        margin-top: 2%;
+    }
+    
+    .hero-content {
+        padding: 1rem 0;
+    }
+    
+    #herosec {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    #herosecwords {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-cta-button,
+    .background-icon {
+        animation: none;
+    }
+    
+    .hero-text {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    /* Hide video for users who prefer reduced motion */
+    .background-video {
+        display: none;
+    }
+    
+    /* Show fallback background instead */
+    .earth-planet-1920x1080-parent::before {
+        opacity: 1;
+        z-index: 0;
+    }
+}
+
+/* VIDEO LOADING STATES AND ERROR HANDLING */
+.background-video {
+    /* Ensure video starts playing immediately when loaded */
+    will-change: opacity;
+}
+
+/* Show fallback background if video fails */
+.background-video:not([src]) + .earth-planet-1920x1080-parent::before,
+.background-video[src=""] + .earth-planet-1920x1080-parent::before {
+    opacity: 1;
+}
+
+/* Ensure video is properly loaded and playing */
+@media (prefers-reduced-motion: no-preference) {
+    .background-video {
+        /* Force video to be visible when motion is allowed */
+        opacity: 0.25;
+    }
+}
+
+/* ENHANCED: Video loading and autoplay fixes */
+.background-video {
+    /* Force video to start loading immediately */
+    preload: auto;
+}
+
+/* Ensure video plays on page load */
+.earth-planet-1920x1080-parent {
+    /* Container should be ready for video */
+    background: linear-gradient(
+        135deg,
+        rgba(5, 28, 77, 0.9) 0%,
+        rgba(8, 30, 77, 0.8) 50%,
+        rgba(5, 33, 104, 0.7) 100%
+    );
+}
+
+/* Video should overlay the background */
+.background-video {
+    /* Ensure video is on top of background gradient */
+    z-index: -1;
+    background: transparent;
+}
+
+/* Hero CTA button alignment fix */
+.hero-cta-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-base);
+}

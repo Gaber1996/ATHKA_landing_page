@@ -1,0 +1,98 @@
+/* =================
+   MAIN PAGE CONTAINER
+   ================= */
+
+
+
+.main {
+    width: 100%;
+    position: relative;
+    background-color: #051c4d;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 0 0.02vw;
+    box-sizing: border-box;
+    gap: 0.73vw;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    font-size: var(--gaber1996githubio-roboto-regular-16-size);
+    color: var(--gaber1996githubio-white);
+    font-family: var(--gaber1996githubio-roboto-regular-16);
+    max-width: 100%;
+}
+
+.main-inner {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-12xs) var(--padding-87xl) 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Global overflow control */
+.main, 
+.main-inner, 
+.earth-planet-1920x1080-parent, 
+.frame-section, 
+.frame-parent2, 
+.cards {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* =================
+   MAIN LAYOUT & BACKGROUND EFFECTS
+   ================= */
+
+/* Background Gradient Effects */
+.main-child {
+    width: 47.62vw;
+    height: 52.39vw;
+    position: absolute;
+    margin: 0 !important;
+    top: 69.05vw;
+    right: -58.24vw;
+    filter: blur(13.79vw);
+    border-radius: 50%;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        rgba(255, 97, 97, 0.65) 0deg,
+        rgba(149, 185, 255, 0.65) 70.5deg,
+        rgba(149, 185, 255, 0.65) 162.37deg,
+        rgba(149, 185, 255, 0.65) 233.62deg,
+        rgba(151, 71, 255, 0.65) 310.5deg
+    );
+    flex-shrink: 0;
+    transform: rotate(122.1deg);
+    transform-origin: 0 0;
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
+
+.main-item {
+    width: 47.62vw;
+    height: 52.39vw;
+    position: absolute;
+    margin: 0 !important;
+    top: 143.58vw;
+    left: 37.02vw;
+    filter: blur(13.79vw);
+    border-radius: 50%;
+    background: conic-gradient(
+        from 180deg at 50% 50%,
+        rgba(255, 97, 97, 0.65) 0deg,
+        rgba(149, 185, 255, 0.65) 70.5deg,
+        rgba(149, 185, 255, 0.65) 162.37deg,
+        rgba(149, 185, 255, 0.65) 233.62deg,
+        rgba(151, 71, 255, 0.65) 310.5deg
+    );
+    flex-shrink: 0;
+    transform: rotate(122.1deg);
+    transform-origin: 0 0;
+    mix-blend-mode: overlay;
+}

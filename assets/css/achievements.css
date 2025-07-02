@@ -1,0 +1,844 @@
+/* Simple & Clean Achievements Section CSS - Minimal Background Version - FIXED TEXT CLIPPING */
+
+/* Layout/Structure Classes */
+.content-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 2rem 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--gaber1996githubio-white);
+  font-family: var(--gaber1996githubio-roboto-regular-16);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(5, 28, 77, 0.98) 0%, rgba(8, 30, 77, 0.95) 100%);
+  min-height: 100vh;
+}
+
+/* Simple Clean Background - Just subtle accents */
+.content-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Simple gradient overlay */
+    radial-gradient(circle at 20% 20%, rgba(104, 209, 223, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(104, 209, 223, 0.02) 0%, transparent 50%),
+    
+    /* Minimal accent lines */
+    linear-gradient(90deg, transparent 30%, rgba(104, 209, 223, 0.04) 50%, transparent 70%),
+    linear-gradient(0deg, transparent 40%, rgba(104, 209, 223, 0.03) 60%, transparent 80%);
+    
+  background-size: 
+    100% 100%,
+    100% 100%,
+    100% 1px,
+    1px 100%;
+    
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Very subtle movement */
+.content-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    /* Simple corner accents */
+    linear-gradient(135deg, rgba(104, 209, 223, 0.05) 0%, transparent 20%),
+    linear-gradient(-135deg, rgba(104, 209, 223, 0.03) 0%, transparent 15%);
+    
+  background-position: top left, bottom right;
+  background-size: 200px 200px, 150px 150px;
+  background-repeat: no-repeat;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-width: 1400px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+}
+
+/* Modern Header Section */
+.frame-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  width: 100%;
+  z-index: 1;
+}
+
+.frame-parent3 {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.frame-wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Enhanced Success Story Section */
+.success-story-content-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  max-width: 100%;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.success-story-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  min-width: 500px;
+  max-width: 600px;
+  position: relative;
+  padding: 0.5rem 0; /* Added padding for better text rendering */
+}
+
+
+
+.success-story-heading-content-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.success-story-heading-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.2rem 0; /* Added padding */
+  box-sizing: border-box;
+  gap: 0.8rem; /* Increased from 0.5rem */
+  max-width: 100%;
+  z-index: 1;
+}
+
+.success-story-mask {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.8rem; /* Increased from 0.5rem */
+  padding: 0.2rem 0; /* Added padding */
+}
+
+/* Simple heading styling */
+.success-story-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 1rem;
+  position: relative;
+}
+
+.success-story-heading::after {
+  content: '';
+  position: absolute;
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid var(--color-cyan-64);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  filter: drop-shadow(0 0 8px rgba(104, 209, 223, 0.3));
+}
+
+/* Clean main title - FIXED TEXT CLIPPING */
+.your-success-story-container {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.3; /* Increased from 1.1 to 1.3 */
+  text-align: left;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 0.3rem; /* Added padding to prevent clipping */
+  overflow: visible; /* Ensure text is not clipped */
+}
+
+/* Text Content Classes */
+.heading-21 {
+  position: relative;
+  letter-spacing: 0.2rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-cyan-64) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 15px rgba(104, 209, 223, 0.2);
+}
+
+.turning {
+  font-weight: 300;
+  color: #ffffff;
+  display: inline; /* Ensure proper inline rendering */
+}
+
+.ideas1 {
+  font-weight: 700;
+  color: var(--color-cyan-64);
+  display: inline; /* Ensure proper inline rendering */
+}
+
+.agile {
+  font-weight: 700;
+  color: var(--color-cyan-64); 
+  position: relative;
+  text-shadow: 0 0 12px rgba(104, 209, 223, 0.3); 
+}
+
+
+
+.our-digital-services-container {
+  width: 100%;
+  position: relative;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  font-size: 1rem;
+  opacity: 0.95;
+  padding: 1rem;
+  background: linear-gradient(90deg, rgba(104, 209, 223, 0.04) 0%, transparent 100%);
+  border-left: 3px solid rgba(104, 209, 223, 0.3);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.our-digital-services-container1 {
+  width: 100%;
+}
+
+.our-digital-services {
+  margin: 0;
+  padding: 0.3rem 0;
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 500px;
+  text-align: left;
+  font-size: var(--gaber1996githubio-roboto-regular-20-size);
+}
+
+/* Simple Icon */
+.mask-group-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+  filter: brightness(1.2) drop-shadow(0 0 5px rgba(104, 209, 223, 0.2));
+}
+
+/* Timeline Container - Clean & Simple */
+.card8 {
+  align-self: stretch;
+  height: auto;
+  backdrop-filter: blur(20px);
+  border-radius: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  overflow: visible;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.5rem;
+  position: relative;
+  gap: 1rem;
+  max-width: 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(104, 209, 223, 0.04) 100%
+  );
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.card8:hover {
+  transform: translateY(-0.5rem);
+  border-color: rgba(104, 209, 223, 0.2);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.3);
+}
+[dir="rtl"] .card8 {
+  direction: rtl;
+}
+
+/* Timeline Layout */
+.content2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.title1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+[dir="rtl"] .title1 {
+  direction: rtl;
+}
+
+/* Timeline Achievement Items */
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 18rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  
+}
+[dir="rtl"] .timeline-item {
+  direction: rtl;
+  gap: 7rem;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .timeline-item {
+  direction: rtl;
+}
+
+/* Simple Achievement Number Circles */
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(145deg, rgba(104, 209, 223, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border: 2px solid rgba(104, 209, 223, 0.3);
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  margin-right: -8rem;
+}
+
+.timeline-item:nth-child(even) .subtitle {
+  margin-right: 0;
+  margin-left: -8rem;
+}
+
+.subtitle:hover {
+  transform: scale(1.1);
+  border-color: rgba(104, 209, 223, 0.5);
+  background: linear-gradient(145deg, rgba(104, 209, 223, 0.2) 0%, rgba(255, 255, 255, 0.08) 100%);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3), 0 0 30px rgba(104, 209, 223, 0.2);
+}
+
+/* Achievement Numbers */
+.heading-23,
+.heading-24,
+.heading-25 {
+  position: relative;
+  font-size: 2.2rem;
+  line-height: 1;
+  font-weight: 900;
+  color: var(--color-cyan-64);
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+  z-index: 2;
+  transition: all 0.4s ease;
+  margin: 0;
+  font-family: 'Inter', monospace;
+}
+
+.subtitle:hover .heading-23,
+.subtitle:hover .heading-24,
+.subtitle:hover .heading-25 {
+  text-shadow: 0 0 25px rgba(104, 209, 223, 0.6);
+}
+
+/* Simple Timeline Content Cards */
+.timeline-content {
+  flex: 1;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(104, 209, 223, 0.04) 100%);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+}
+
+.timeline-content:hover {
+  transform: translateY(-0.5rem);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(104, 209, 223, 0.06) 100%);
+  border-color: rgba(104, 209, 223, 0.2);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Content Headings */
+.timeline-heading {
+  position: relative;
+  line-height: 1.3;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-cyan-64);
+  text-shadow: 0 0 15px rgba(104, 209, 223, 0.3);
+  z-index: 2;
+  margin-bottom: 0.3rem;
+  transition: all 0.4s ease;
+}
+
+.timeline-content:hover .timeline-heading {
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+  transform: translateX(5px);
+}
+
+/* Timeline Content Descriptions */
+.timeline-description {
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: left;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+.timeline-content:hover .timeline-description {
+  color: rgba(255, 255, 255, 0.95);
+  transform: translateX(5px);
+}
+
+/* Hidden elements */
+.content3,
+.background1,
+.group-icon,
+.service-bgsvg-icon8,
+.backgroundborder13 {
+  display: none;
+}
+
+/* Text Styling Classes */
+.span {
+  color: var(--color-cyan-64);
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(104, 209, 223, 0.3);
+}
+
+/* Simple Entrance Animations */
+.content1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: simpleFadeInUp 1s ease-out 0.3s forwards;
+}
+
+@keyframes simpleFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card8 {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: simpleCardReveal 1s ease-out 0.6s forwards;
+}
+
+@keyframes simpleCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-item:nth-child(1) {
+  opacity: 0;
+  animation: simpleTimelineReveal 0.8s ease-out 0.9s forwards;
+}
+
+.timeline-item:nth-child(2) {
+  opacity: 0;
+  animation: simpleTimelineReveal 0.8s ease-out 1.1s forwards;
+}
+
+.timeline-item:nth-child(3) {
+  opacity: 0;
+  animation: simpleTimelineReveal 0.8s ease-out 1.3s forwards;
+}
+
+@keyframes simpleTimelineReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design - IMPROVED TEXT CLIPPING FIXES */
+@media screen and (max-width: 1200px) {
+  .content-wrapper {
+    min-height: 105vh;
+    padding: 2rem 2rem 2rem;
+  }
+  
+  .frame-parent3 {
+    gap: 1rem;
+  }
+  
+  .success-story-content-parent {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .success-story-content {
+    min-width: auto;
+    align-items: center;
+  }
+  
+  .success-story-content::before {
+    display: none;
+  }
+  
+  .success-story-heading::after {
+    display: none;
+  }
+  
+  .timeline-item {
+    gap: 4rem;
+  }
+  
+  .timeline-content {
+    max-width: 650px;
+    padding: 1.2rem;
+  }
+  
+  .subtitle {
+    width: 100px;
+    height: 100px;
+    margin-right: -5rem;
+  }
+  
+  .timeline-item:nth-child(even) .subtitle {
+    margin-right: 0;
+    margin-left: -5rem;
+  }
+  
+  .heading-23,
+  .heading-24,
+  .heading-25 {
+    font-size: 1.8rem;
+  }
+  
+  .card8 {
+    padding: 1.5rem 1.5rem;
+    gap: 1.2rem;
+  }
+  
+  .title1 {
+    gap: 1.2rem;
+  }
+  
+  .content2 {
+    gap: 0.8rem;
+  }
+  
+  .your-success-story-container {
+    line-height: 1.4;
+    padding-bottom: 0.4rem;
+  }
+  
+  .success-story-mask {
+    gap: 1rem;
+    padding: 0.3rem 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content-wrapper {
+    min-height: 100vh;
+    padding: 1.5rem 1rem 1.5rem;
+  }
+  
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .timeline-content {
+    max-width: 700px;
+    text-align: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .subtitle {
+    width: 90px;
+    height: 90px;
+    margin-right: 0;
+  }
+  
+  .timeline-item:nth-child(even) .subtitle {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .timeline-description {
+    text-align: center;
+  }
+  
+  .card8 {
+    padding: 1.2rem 1.2rem;
+    gap: 1rem;
+  }
+  
+  .success-story-mask {
+    align-items: center;
+    text-align: center;
+    padding: 0.4rem 0;
+  }
+  
+  .your-success-story-container {
+    text-align: center;
+    line-height: 1.4;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    min-height: 100vh;
+    padding: 1.2rem 1rem 1.2rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+    max-width: 550px;
+  }
+  
+  .subtitle {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .heading-23,
+  .heading-24,
+  .heading-25 {
+    font-size: 1.6rem;
+  }
+  
+  .timeline-heading {
+    font-size: 1rem;
+  }
+  
+  .timeline-description {
+    font-size: 0.85rem;
+  }
+  
+  .your-success-story-container {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding-bottom: 0.5rem;
+  }
+  
+  .card8 {
+    padding: 1rem 1rem;
+    gap: 1rem;
+    border-radius: 2rem;
+  }
+  
+  .success-story-content {
+    padding: 0.8rem 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-wrapper {
+    min-height: 100vh;
+    padding: 1rem 0.8rem 1rem;
+  }
+  
+  .card8 {
+    padding: 1rem 0.8rem;
+    gap: 0.8rem;
+    border-radius: 1.5rem;
+  }
+  
+  .timeline-content {
+    padding: 0.8rem;
+    max-width: 450px;
+    border-radius: 1.2rem;
+  }
+  
+  .subtitle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .heading-23,
+  .heading-24,
+  .heading-25 {
+    font-size: 1.4rem;
+  }
+  
+  .your-success-story-container {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding-bottom: 0.6rem;
+  }
+  
+  .success-story-mask {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Accessibility improvements */
+.card8:focus-within,
+.timeline-content:focus-within,
+.subtitle:focus-within {
+  outline: 2px solid var(--color-cyan-64);
+  outline-offset: 2px;
+}
+
+/* Performance optimizations */
+.card8,
+.timeline-content,
+.subtitle {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .card8,
+  .timeline-content,
+  .subtitle,
+  .heading-23,
+  .heading-24,
+  .heading-25,
+  .mask-group-icon {
+    transition: none;
+    animation: none !important;
+  }
+  
+  .card8:hover,
+  .timeline-content:hover,
+  .subtitle:hover {
+    transform: none !important;
+  }
+}

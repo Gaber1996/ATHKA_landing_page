@@ -1,0 +1,169 @@
+{
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "ourServices": "Our Services",
+    "ourMission": "Our Mission",
+    "ourAchievements": "Our Achievements",
+    "ourProcess": "Our Process",
+    "contact": "Contact",
+    "arabic": "العربية"
+  },
+  "hero": {
+    "title": "AthkaDO Leading Software Company in Saudi Arabia",
+    "subtitle": "Turning Ideas into Impactful Software & Data Solutions",
+    "cta": "Get In Touch"
+  },
+  "about": {
+    "title": "ABOUT Company",
+    "heading": "Turning Ideas into Impactful Software & Data",
+    "description": "AthkaDo, based in Saudi Arabia, empowers Gulf businesses with tailored software and data solutions. With local expertise and a passion for innovation, we turn your ideas into impactful, fully functional tech solutions—built to fit your needs from start to finish.",
+    "cta": "Get In Touch"
+  },
+  "services": {
+    "title": "Our Services",
+    "heading": "Your Success Story Begins With AthkaDo",
+    "description": "Our digital services empower brands with innovative strategies and solutions for sustainable growth and engagement.",
+    "cta": "Get In Touch",
+    "cards": [
+      {
+        "title": "Web & Mobile Development",
+        "description": "Responsive, engaging apps that connect you with your audience across any device"
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Intuitive, beautiful interfaces that make every interaction with your brand enjoyable"
+      },
+      {
+        "title": "Data Analytics & Insights",
+        "description": "We transform raw data into insights you can act on: Data Scraping-Data Cleaning-Machine Learning & Predictive Modeling-Statistical Analysis"
+      },
+      {
+        "title": "Automation Solutions",
+        "description": "Streamlining repetitive tasks—including fuel station automation—so you can focus on growth."
+      },
+      {
+        "title": "Market Research & Business Analysis",
+        "description": "In-depth analysis of industry trends and market insights to refine your strategies and keep you competitive."
+      },
+      {
+        "title": "Software Consulting & QA",
+        "description": "Your tech partner for strategic guidance and rigorous testing, ensuring smooth, reliable performance."
+      }
+    ],
+    "specialCards": [
+      {
+        "title": "Smart Cities & IoT Solutions",
+        "description": "We're helping shape the future of connected cities with IoT solutions that optimize operations, enhance connectivity, and drive smarter, more sustainable urban environments."
+      },
+      {
+        "title": "AR and VR Development",
+        "description": "Bringing your ideas to life in immersive digital experiences that captivate users."
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Our Achievements",
+    "heading": "Our Impact Achievements in Driving Progress",
+    "description": "Driving progress and change across industries and communities with measurable impact and lasting results.",
+    "items": [
+      {
+        "number": "+10",
+        "title": "Global Clients",
+        "description": "Successfully partnered with businesses across various industries, delivering solutions that meet diverse digital needs and drive meaningful growth worldwide."
+      },
+      {
+        "number": "+20",
+        "title": "Talented Specialists",
+        "description": "A team of dedicated experts who bring depth of knowledge and specialized skills to every project, ensuring excellence in every solution we deliver."
+      },
+      {
+        "number": "+3",
+        "title": "Regions Served",
+        "description": "Expanding our reach across multiple regions, fostering innovation and delivering solutions with lasting impact that transform businesses and communities."
+      }
+    ]
+  },
+  "mission": {
+    "title": "Our Mission",
+    "heading": "At AthkaDo, Our mission is simple",
+    "description": "to be your trusted partner in digital transformation, delivering data-driven solutions and custom software to help your business thrive. We're with you every step of the way."
+  },
+  "values": {
+    "title": "Our Values",
+    "heading": "Your Success Story Begins With AthkaDo",
+    "cards": [
+      {
+        "title": "Accuracy",
+        "description": "attention to detail that ensures precision and reliability in every task."
+      },
+      {
+        "title": "Excellence",
+        "description": "From start to finish, we give our best."
+      },
+      {
+        "title": "Integrity",
+        "description": "Honest, transparent, and committed to what's right."
+      },
+      {
+        "title": "Innovation",
+        "description": "Fresh ideas and technologies to keep you ahead."
+      },
+      {
+        "title": "Customer-Centricity",
+        "description": "Your success is our priority, always."
+      }
+    ]
+  },
+  "process": {
+    "title": "Our Process",
+    "heading": "Our Agile & Data-Driven Approach",
+    "description": "Combining Agile development principles with a commitment to data accuracy, our process is designed to adapt to your business needs while maintaining a clear focus on quality.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Consultation & Analysis",
+        "description": "We begin by understanding your unique goals, challenges, and vision. Through comprehensive analysis and strategic consultation, we define clear pathways for software development or data solutions that align perfectly with your business objectives and market requirements."
+      },
+      {
+        "number": "02",
+        "title": "User-Centered Design",
+        "description": "Creating intuitive interfaces and user experiences that prioritize usability and engagement. We design with your users in mind, ensuring every interaction feels natural and purposeful while maintaining aesthetic excellence and functional clarity."
+      },
+      {
+        "number": "03",
+        "title": "Development & Data Integration",
+        "description": "Building robust, scalable software solutions while seamlessly integrating accurate data systems. Our development process combines cutting-edge technology with proven methodologies to deliver powerful insights and reliable performance."
+      },
+      {
+        "number": "04",
+        "title": "Quality Assurance",
+        "description": "Rigorous testing and verification processes ensure software reliability and data accuracy. We implement comprehensive quality assurance protocols to guarantee optimal performance, security, and user satisfaction across all platforms and use cases."
+      },
+      {
+        "number": "05",
+        "title": "Deployment & Support",
+        "description": "Seamless deployment of solutions with comprehensive ongoing support. We ensure smooth transitions, provide thorough training, and maintain continuous support to guarantee your continued success and system optimization."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Let's Transform Your Business Together!",
+    "description": "Let's connect and explore how AthkaDo can help you achieve your digital goals with solutions designed for the Gulf market. We're here to support your vision every step of the way!",
+    "button": "Get In Touch"
+  },
+  "footer": {
+    "description": "Let's connect and explore how AthkaDo can help you achieve your digital goals with solutions designed for the Gulf market. We're here to support your vision every step of the way!",
+    "social": {
+      "linkedin": "Join Us On Linked In",
+      "instagram": "Follow On Instagram",
+      "twitter": "Follow Us On Twitter"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Phone",
+      "office": "Office"
+    },
+    "copyright": "© 2024 ATHKA IT Solutions. All rights reserved."
+  }
+}

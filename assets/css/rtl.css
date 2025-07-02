@@ -1,0 +1,787 @@
+/* RTL (Right-to-Left) Styles for Arabic Version */
+
+/* CRITICAL: Simple and Clean Arabic Font Setup */
+.lang-ar {
+    font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif !important;
+    text-align: right;
+    direction: rtl;
+    
+    /* ESSENTIAL: Enable Arabic letter connection */
+    font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures contextual;
+    font-kerning: auto;
+}
+
+/* CRITICAL: Apply Arabic text rendering to ALL text elements */
+.lang-ar *,
+.lang-ar h1,
+.lang-ar h2,
+.lang-ar h3,
+.lang-ar h4,
+.lang-ar h5,
+.lang-ar h6,
+.lang-ar p,
+.lang-ar span,
+.lang-ar div,
+.lang-ar a,
+.lang-ar button {
+    font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif !important;
+    direction: rtl;
+    text-align: right;
+    
+    /* ESSENTIAL: Enable Arabic letter connection */
+    font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures contextual;
+    font-kerning: auto;
+}
+
+/* ENHANCED: Navigation RTL Adjustments - PROPER RIGHT TO LEFT LAYOUT */
+.lang-ar .nav-bar {
+    direction: rtl;
+}
+
+.lang-ar .buttons {
+    flex-direction: row-reverse;
+    direction: rtl;
+}
+
+.lang-ar .buttons-inner {
+    margin-right: 0;
+    margin-left: auto;
+    order: 3; /* Move logo to the right */
+}
+
+.lang-ar .buttons-child {
+    margin-left: 0;
+    order: 2; /* Navigation links in the middle */
+    direction: rtl;
+}
+
+.lang-ar .contact-menu-wrapper {
+    margin-left: 0;
+    margin-right: auto;
+    order: 1; /* Contact button to the left */
+}
+
+/* CRITICAL: Fix navigation links order and direction */
+.lang-ar .home-parent {
+    flex-direction: row-reverse;
+    direction: rtl;
+    gap: 1.5rem;
+}
+
+/* ENHANCED: Individual navigation link styling for RTL */
+.lang-ar .nav-link {
+    direction: rtl;
+    text-align: right;
+    unicode-bidi: embed;
+}
+
+.lang-ar .nav-link::after {
+    transform-origin: left; /* Changed from right */
+}
+
+.lang-ar .nav-link:hover::after,
+.lang-ar .nav-link.active::after {
+    transform-origin: right; /* Changed from left */
+}
+
+/* ENHANCED: Mobile navigation RTL */
+.lang-ar .mobile-nav {
+    left: 1rem;
+    right: auto;
+    text-align: right;
+    direction: rtl;
+}
+
+.lang-ar .mobile-nav a {
+    text-align: right;
+    direction: rtl;
+    padding-right: 1.5rem;
+    padding-left: 1rem;
+}
+
+.lang-ar .mobile-nav a:hover {
+    padding-right: 2rem;
+    padding-left: 1rem; /* Changed from 1.5rem */
+}
+
+/* ENHANCED: Hamburger menu positioning for RTL */
+.lang-ar .hamburger-menu {
+    order: 0; /* Move hamburger to far left in RTL */
+}
+
+/* ENHANCED: Logo and brand name RTL */
+.lang-ar .testpng-parent {
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+}
+
+.lang-ar .athkado {
+    direction: rtl;
+    text-align: right;
+}
+
+/* FIXED: Arabic Contact Button Dimensions - Match English Version */
+.lang-ar .web-butttons {
+    /* CRITICAL: Match English button dimensions exactly */
+    padding: 0.4rem 1.2rem !important;
+    font-size: 0.85rem !important;
+    min-width: 120px !important;
+    height: auto !important;
+    min-height: 40px !important;
+    
+    /* Ensure proper text rendering */
+    font-family: 'Noto Sans Arabic', sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.4 !important;
+    
+    /* Maintain button styling */
+    background: linear-gradient(135deg, var(--color-cyan-64) 0%, #4FB8FF 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(104, 209, 223, 0.3);
+    
+    /* RTL specific adjustments */
+    direction: rtl;
+    text-align: center;
+}
+
+.lang-ar .lets-talk {
+    /* CRITICAL: Match English text styling */
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    color: var(--color-primary) !important;
+    position: relative;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    
+    /* Arabic text specific */
+    font-family: 'Noto Sans Arabic', sans-serif !important;
+    direction: rtl;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 1.4;
+    
+    /* Ensure proper rendering */
+    font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures contextual;
+    font-kerning: auto;
+}
+
+/* Hero Section RTL Adjustments */
+.lang-ar .hero-text {
+    text-align: center;
+}
+
+.lang-ar .hero-cta-button {
+    flex-direction: row-reverse;
+}
+
+.lang-ar .hero-cta-button:hover .background-icon {
+    transform: translateX(-4px) rotate(-45deg);
+}
+
+/* About Section RTL Adjustments */
+.lang-ar .about-agency-content {
+    justify-content: flex-end;
+}
+
+.lang-ar .about-agency-content::before {
+    right: -2rem;
+    left: auto;
+}
+
+.lang-ar .about-agency-content::after {
+    left: -1rem;
+    right: auto;
+    border-right: 12px solid var(--color-cyan-64);
+    border-left: none;
+}
+
+.lang-ar .athkado-based-in {
+    border-right: 3px solid rgba(104, 209, 223, 0.3);
+    border-left: none;
+    border-radius: 1rem 0 0 1rem;
+    padding-right: 1.5rem;
+    padding-left: 1rem;
+    text-align: right;
+    direction: rtl;
+}
+
+.lang-ar .get-in-touch-parent {
+    flex-direction: row-reverse;
+}
+
+.lang-ar .get-in-touch-parent:hover .background-icon {
+    transform: translateX(-0.8rem) scale(1.2) rotate(-360deg);
+}
+
+/* Services Section RTL Adjustments */
+.lang-ar .success-story-heading::after {
+    left: -1.5rem;
+    right: auto;
+    border-right: 15px solid var(--color-cyan-64);
+    border-left: none;
+}
+
+.lang-ar .our-digital-services-container {
+    border-right: 3px solid rgba(104, 209, 223, 0.3);
+    border-left: none;
+    border-radius: 1rem 0 0 1rem;
+    text-align: right;
+    direction: rtl;
+}
+
+.lang-ar .card-inner {
+    align-items: flex-start;
+    text-align: right;
+}
+
+.lang-ar .bringing-your-ideas {
+    border-right: 3px solid rgba(104, 209, 223, 0.3);
+    border-left: none;
+    border-radius: 1rem 0 0 1rem;
+    text-align: right;
+    direction: rtl;
+}
+
+/* ENHANCED: Service card content RTL */
+.lang-ar .heading-3-container,
+.lang-ar .responsive-engaging-apps-container {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Achievements Section RTL Adjustments */
+
+
+.lang-ar .timeline-item:nth-child(even) {
+    flex-direction: row;
+}
+
+.lang-ar .timeline-item {
+    flex-direction: row-reverse;
+}
+
+.lang-ar .timeline-content {
+    text-align: right;
+    align-items: flex-start;
+    direction: rtl;
+}
+
+.lang-ar .timeline-item .subtitle {
+    margin-left: -8rem;
+    margin-right: 0;
+}
+
+.lang-ar .timeline-item:nth-child(even) .subtitle {
+    margin-right: -8rem;
+    margin-left: 0;
+}
+
+.lang-ar .timeline-content:hover .timeline-heading,
+.lang-ar .timeline-content:hover .timeline-description {
+    transform: translateX(-5px);
+}
+
+.lang-ar .timeline-heading,
+.lang-ar .timeline-description {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Mission Section RTL Adjustments */
+.lang-ar .title2::before {
+    right: -2rem;
+    left: auto;
+}
+
+.lang-ar .title2::after {
+    left: -4rem;
+    right: auto;
+    border-right: 15px solid var(--color-cyan-64);
+    border-left: none;
+}
+
+.lang-ar .to-be-your-container {
+    border-right: 3px solid rgba(104, 209, 223, 0.3);
+    border-left: none;
+    border-radius: 1rem 0 0 1rem;
+    text-align: right;
+    direction: rtl;
+}
+
+/* ENHANCED: Values Section Complete RTL Layout */
+.lang-ar .content7 {
+    flex-direction: row-reverse;
+}
+
+.lang-ar .header3 {
+    order: 2;
+    text-align: center;
+}
+
+.lang-ar .cards-container {
+    order: 1;
+}
+
+.lang-ar .mission {
+    text-align: center;
+    direction: rtl;
+}
+
+.lang-ar .your-success-story-container1 {
+    text-align: center;
+    direction: rtl;
+}
+
+.lang-ar .heading-26 {
+    text-align: center;
+    direction: rtl;
+}
+
+.lang-ar .card9 {
+    direction: rtl;
+}
+
+.lang-ar .service-bgsvg-fill2 {
+    direction: rtl;
+}
+
+.lang-ar .component-7svg-parent {
+    direction: rtl;
+    text-align: right;
+}
+
+.lang-ar .heading-3-creative-content-p-parent {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Process Section RTL Adjustments */
+.lang-ar .development-header {
+    justify-content: flex-end;
+}
+
+.lang-ar .combining-agile-development {
+    border-right: 3px solid rgba(104, 209, 223, 0.3);
+    border-left: none;
+    border-radius: 1rem 0 0 1rem;
+    text-align: right;
+    direction: rtl;
+}
+
+.lang-ar .heading-2-button1 {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.lang-ar .border2:hover .digital-marketing2,
+.lang-ar .border2.active .digital-marketing2 {
+    transform: translateX(-5px);
+}
+
+.lang-ar .what-its-crafting {
+    border-right: 2px solid rgba(104, 209, 223, 0.2);
+    border-left: none;
+    border-radius: 0 0 0 0.5rem;
+    margin: 0.5rem 1rem 0 0;
+    text-align: right;
+    direction: rtl;
+}
+
+.lang-ar .border2.active .what-its-crafting {
+    border-right-color: rgba(104, 209, 223, 0.4);
+    margin: 1rem 1rem 1rem 0;
+}
+
+.lang-ar .digital-marketing2,
+.lang-ar .what-its-crafting {
+    text-align: right;
+    direction: rtl;
+}
+
+/* ENHANCED: Process Section Arabic Content RTL */
+.lang-ar .mission-style-process {
+    text-align: center;
+    direction: rtl;
+}
+
+.lang-ar .mission-style-process .heading-26 {
+    text-align: center;
+    direction: rtl;
+}
+
+.lang-ar .mission-style-process .at-athkado-our-container {
+    text-align: center;
+    direction: rtl;
+}
+
+.lang-ar .mission-style-process .to-be-your-container {
+    text-align: center;
+    direction: rtl;
+    border-right: none;
+    border-top: 3px solid rgba(104, 209, 223, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.lang-ar .mission-style-process .our-digital-services {
+    text-align: center;
+    direction: rtl;
+}
+
+/* ENHANCED: Process Steps Arabic RTL */
+.lang-ar .services {
+    direction: rtl;
+}
+
+.lang-ar .border2 {
+    direction: rtl;
+}
+
+.lang-ar .heading-2-button1 {
+    direction: rtl;
+    text-align: right;
+}
+
+.lang-ar .empty-service-description {
+    direction: rtl;
+    text-align: right;
+}
+
+.lang-ar .digital-marketing-parent {
+    direction: rtl;
+    text-align: right;
+}
+
+/* CTA Section RTL Adjustments */
+.lang-ar .get-in-touch-container {
+    flex-direction: row-reverse;
+}
+
+.lang-ar .get-in-touch-container:hover .background-icon {
+    transform: translateX(-3px);
+}
+
+.lang-ar .lets-transform-your-container,
+.lang-ar .lets-connect-and {
+    text-align: center;
+    direction: rtl;
+}
+
+/* Footer Section RTL Adjustments */
+.lang-ar .footer-content {
+    text-align: right;
+    direction: rtl;
+}
+
+.lang-ar .social-links {
+    flex-direction: row-reverse;
+}
+
+.lang-ar .social-names {
+    align-items: flex-end;
+    text-align: right;
+}
+
+
+
+.lang-ar .footer-description {
+    text-align: right;
+    direction: rtl;
+}
+
+/* ENHANCED: Office Address RTL Styling */
+.lang-ar .office-address {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Noto Sans Arabic', sans-serif !important;
+    unicode-bidi: embed;
+    
+    /* Ensure proper Arabic text rendering */
+    font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures contextual;
+    font-kerning: auto;
+}
+
+/* ENHANCED: Mobile Responsive RTL Adjustments */
+@media screen and (max-width: 768px) {
+    /* CRITICAL: Mobile navigation RTL fixes */
+    .lang-ar .nav-bar {
+        padding: 0 1rem;
+        direction: rtl;
+    }
+    
+    .lang-ar .buttons {
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .lang-ar .buttons-inner {
+        order: 2; /* Logo in center on mobile */
+        margin: 0;
+    }
+    
+    .lang-ar .contact-menu-wrapper {
+        order: 1; /* Contact and hamburger on left */
+        margin: 0;
+        flex-direction: row-reverse;
+        gap: 0.5rem;
+    }
+    
+    .lang-ar .hamburger-menu {
+        order: 1; /* Hamburger on far left */
+    }
+    
+    .lang-ar .web-butttons {
+        order: 2; /* Contact button next to hamburger */
+        /* MOBILE: Maintain proper dimensions */
+        padding: 0.3rem 1rem !important;
+        font-size: 0.8rem !important;
+        min-width: 100px !important;
+        min-height: 36px !important;
+    }
+    
+    .lang-ar .lets-talk {
+        font-size: 0.8rem !important;
+    }
+    
+    /* Mobile navigation dropdown RTL */
+    .lang-ar .mobile-nav {
+        right: 1rem;
+        left: auto;
+        text-align: right;
+        direction: rtl;
+    }
+    
+    .lang-ar .mobile-nav a {
+        text-align: right;
+        direction: rtl;
+        padding: 0.6rem 1.5rem 0.6rem 1rem;
+    }
+    
+    .lang-ar .mobile-nav a:hover {
+        padding-right: 2rem;
+        padding-left: 1rem;
+    }
+    
+    .lang-ar .light-trails-buildings-parent,
+    .lang-ar .success-story-content-parent,
+    .lang-ar .development-container {
+        flex-direction: column;
+    }
+    
+    .lang-ar .about-agency-content-parent,
+    .lang-ar .success-story-content,
+    .lang-ar .development-content,
+    .lang-ar .development-approach {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .lang-ar .athkado-based-in,
+    .lang-ar .our-digital-services-container,
+    .lang-ar .combining-agile-development,
+    .lang-ar .to-be-your-container {
+        border-right: none;
+        border-top: 3px solid rgba(104, 209, 223, 0.3);
+        border-radius: 1rem;
+        text-align: center;
+    }
+    
+    .lang-ar .timeline-item,
+    .lang-ar .timeline-item:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .lang-ar .timeline-content {
+        text-align: center;
+        align-items: center;
+    }
+    
+    .lang-ar .timeline-item .subtitle,
+    .lang-ar .timeline-item:nth-child(even) .subtitle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Keep social cards horizontal in Arabic too */
+    .lang-ar .social-cards-container {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    /* MOBILE: Center text for better readability */
+    .lang-ar .turning-ideas-into-container,
+    .lang-ar .your-success-story-container,
+    .lang-ar .at-athkado-our-container,
+    .lang-ar .our-agile-container,
+    .lang-ar .lets-transform-your-container,
+    .lang-ar .your-success-story-container1 {
+        text-align: center !important;
+        direction: rtl !important;
+    }
+    
+    /* MOBILE: Values section RTL adjustments */
+    .lang-ar .content7 {
+        flex-direction: column;
+    }
+    
+    .lang-ar .header3 {
+        order: 1;
+        text-align: center;
+    }
+    
+    .lang-ar .cards-container {
+        order: 2;
+    }
+    
+    /* MOBILE: Process section RTL adjustments */
+    .lang-ar .mission-style-process {
+        text-align: center;
+    }
+    
+    .lang-ar .mission-style-process .to-be-your-container {
+        text-align: center;
+        border-right: none;
+        border-top: 3px solid rgba(104, 209, 223, 0.3);
+        border-radius: 1rem;
+    }
+    
+    /* MOBILE: Office address RTL */
+    .lang-ar .office-address {
+        text-align: center !important;
+        direction: rtl !important;
+    }
+}
+
+/* ENHANCED: Tablet RTL adjustments */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .lang-ar .buttons {
+        flex-direction: row-reverse;
+        gap: 2rem;
+    }
+    
+    .lang-ar .home-parent {
+        flex-direction: row-reverse;
+        gap: 1.2rem;
+    }
+    
+    .lang-ar .web-butttons {
+        /* TABLET: Proper dimensions */
+        padding: 0.35rem 1.1rem !important;
+        font-size: 0.82rem !important;
+        min-width: 110px !important;
+        min-height: 38px !important;
+    }
+    
+    .lang-ar .lets-talk {
+        font-size: 0.82rem !important;
+    }
+}
+
+/* Font size adjustments for Arabic */
+.lang-ar .heading-2,
+.lang-ar .heading-21,
+.lang-ar .heading-26,
+.lang-ar .heading-27,
+.lang-ar .heading-28 {
+    font-size: 0.9rem;
+    text-align: right;
+    direction: rtl;
+}
+
+.lang-ar .turning-ideas-into-container,
+.lang-ar .your-success-story-container,
+.lang-ar .at-athkado-our-container,
+.lang-ar .our-agile-container,
+.lang-ar .lets-transform-your-container {
+    font-size: clamp(2rem, 3.8vw, 3rem);
+}
+
+.lang-ar .athkado-based-in,
+.lang-ar .our-digital-services-container,
+.lang-ar .to-be-your-container,
+.lang-ar .combining-agile-development {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Fix for Arabic font weights */
+.lang-ar .turning {
+    font-weight: 300;
+}
+
+.lang-ar .ideas1,
+.lang-ar .span,
+.lang-ar .agile {
+    font-weight: 700;
+}
+
+/* Fix for button text in Arabic */
+.lang-ar .get-in-touch,
+.lang-ar .hero-cta-button b {
+    font-weight: 600;
+}
+
+/* Fix for Arabic social cards */
+.lang-ar .card14 {
+    direction: rtl;
+}
+
+/* CRITICAL: Navigation link order fix for RTL */
+@media screen and (min-width: 769px) {
+    .lang-ar .nav-link:nth-child(1) { order: 7; } /* الرئيسية - rightmost */
+    .lang-ar .nav-link:nth-child(2) { order: 6; } /* من نحن */
+    .lang-ar .nav-link:nth-child(3) { order: 5; } /* خدماتنا */
+    .lang-ar .nav-link:nth-child(4) { order: 4; } /* مهمتنا */
+    .lang-ar .nav-link:nth-child(5) { order: 3; } /* إنجازاتنا */
+    .lang-ar .nav-link:nth-child(6) { order: 2; } /* منهجيتنا */
+    .lang-ar .nav-link:nth-child(7) { order: 1; } /* English - leftmost */
+}
+
+/* ENHANCED: Better RTL spacing and alignment */
+.lang-ar .nav-link {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.4rem 0.8rem;
+}
+
+/* CRITICAL: Fix Arabic text rendering in navigation */
+.lang-ar .nav-link {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.4;
+}
+
+/* ENHANCED: Small mobile adjustments */
+@media screen and (max-width: 480px) {
+    .lang-ar .web-butttons {
+        /* SMALL MOBILE: Compact but readable */
+        padding: 0.25rem 0.8rem !important;
+        font-size: 0.75rem !important;
+        min-width: 90px !important;
+        min-height: 32px !important;
+    }
+    
+    .lang-ar .lets-talk {
+        font-size: 0.75rem !important;
+    }
+}

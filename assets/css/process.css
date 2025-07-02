@@ -1,0 +1,1115 @@
+/* Simple Process Section CSS Styles - Clean & Minimal Design with PERFECT SCREEN HEIGHT FIT */
+
+/* Layout/Structure Classes */
+.development {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--gaber1996githubio-white);
+  font-family: var(--gaber1996githubio-roboto-regular-16);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(5, 28, 77, 0.98) 0%, rgba(8, 30, 77, 0.95) 100%);
+  
+  /* PERFECT SCREEN HEIGHT FIT */
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+/* Simple Background */
+.development::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(104, 209, 223, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(104, 209, 223, 0.02) 0%, transparent 50%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.development-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1400px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  
+  /* FULL CONTAINER HEIGHT */
+  height: 100%;
+  max-height: calc(100vh - 4rem);
+}
+
+/* MISSION-STYLE CARD CONTAINER FOR PROCESS */
+.mission-style-process {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  z-index: 2;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.015) 0%,
+    rgba(255, 255, 255, 0.003) 50%,
+    rgba(104, 209, 223, 0.01) 100%
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 2rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.12);
+  transition: all 0.6s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Modern card hover effect */
+.mission-style-process::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(104, 209, 223, 0.05) 0%,
+    transparent 50%,
+    rgba(104, 209, 223, 0.03) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  border-radius: 3rem;
+}
+
+.mission-style-process:hover {
+  transform: translateY(-1rem);
+  border-color: rgba(104, 209, 223, 0.3);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.4);
+}
+
+.mission-style-process:hover::before {
+  opacity: 1;
+}
+
+/* Header Section - Redesigned with modern styling */
+.success-story-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  gap: 1rem;
+  position: relative;
+  z-index: 3;
+}
+
+/* Modern decorative element for the header */
+.success-story-heading::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 3rem;
+  background: linear-gradient(180deg, var(--color-cyan-64) 0%, rgba(104, 209, 223, 0.3) 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+}
+
+.success-story-heading::after {
+  content: '';
+  position: absolute;
+  right: -4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid var(--color-cyan-64);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  filter: drop-shadow(0 0 10px rgba(104, 209, 223, 0.4));
+}
+
+.mask-group-icon3 {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+  z-index: 5;
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(104, 209, 223, 0.3));
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); filter: brightness(1.3) drop-shadow(0 0 8px rgba(104, 209, 223, 0.3)); }
+  50% { transform: scale(1.05); filter: brightness(1.5) drop-shadow(0 0 12px rgba(104, 209, 223, 0.5)); }
+}
+
+.heading-26 {
+  position: relative;
+  letter-spacing: 0.05rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 5;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(104, 209, 223, 0.3);
+  white-space: nowrap;
+}
+
+/* Main Title Section - Redesigned with modern card styling */
+.description1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: var(--font-size-31xl);
+  background: transparent !important;
+  z-index: 3;
+  position: relative;
+}
+
+.at-athkado-our-container {
+  margin: 0;
+  position: relative;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.1;
+  z-index: 4;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 800px;
+}
+
+/* Description Section - Redesigned with modern card styling */
+.to-be-your-container {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 400;
+  font-family: var(--font-roboto);
+  z-index: 4;
+  background: linear-gradient(90deg, rgba(104, 209, 223, 0.05) 0%, transparent 100%);
+  border-left: 3px solid rgba(104, 209, 223, 0.3);
+  border-radius: 0 1rem 1rem 0;
+  padding: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.6s ease;
+}
+
+.mission-style-process:hover .to-be-your-container {
+  border-left-color: rgba(104, 209, 223, 0.6);
+  background: linear-gradient(90deg, rgba(104, 209, 223, 0.1) 0%, transparent 100%);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.our-digital-services {
+  margin: 0;
+  padding: 0.3rem 0;
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+/* Side by Side Content Layout */
+.development-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 45%;
+  
+  /* FULL HEIGHT FOR CONTENT */
+  height: 100%;
+  max-height: 100%;
+}
+
+.development-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.development-paragraph {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: var(--gaber1996githubio-roboto-regular-20-size);
+}
+
+.development-approach {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  gap: 1.5rem;
+}
+
+/* Simple Header Classes */
+.mask-group-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+  filter: brightness(1.2);
+}
+
+.heading-28 {
+  text-decoration: none;
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.15rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-cyan-64);
+  display: inline-block;
+  max-width: calc(100% - 2.5rem);
+}
+
+.combining-agile-development {
+  height: auto;
+  flex: 1;
+  position: relative;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  padding: 1.5rem;
+  background: rgba(104, 209, 223, 0.05);
+  border-left: 3px solid rgba(104, 209, 223, 0.3);
+  border-radius: 0 1rem 1rem 0;
+}
+
+.our-agile-container {
+  margin: 0 !important;
+  height: auto;
+  width: 100%;
+  position: relative;
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* SERVICES CONTAINER - PERFECT FIT WITH NO SCROLLBAR WHEN CLOSED */
+.services {
+  flex: 1;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-size: var(--font-size-21xl);
+  gap: 0; /* Remove gap to eliminate extra spacing */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 50%;
+  
+  /* PERFECT HEIGHT CALCULATION */
+  height: 100%;
+  max-height: calc(100vh - 4rem);
+  
+  /* CRITICAL: Hide scrollbar completely when content fits */
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+  /* CRITICAL: Smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Enable scrollbar only when content overflows (when dropdown is active) */
+.services.has-active-dropdown {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(104, 209, 223, 0.3) rgba(255, 255, 255, 0.1);
+  scrollbar-gutter: stable;
+}
+
+/* Custom Scrollbar for Webkit browsers - Only when has-active-dropdown */
+.services.has-active-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.services.has-active-dropdown::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.services.has-active-dropdown::-webkit-scrollbar-thumb {
+  background: rgba(104, 209, 223, 0.3);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.services.has-active-dropdown::-webkit-scrollbar-thumb:hover {
+  background: rgba(104, 209, 223, 0.5);
+}
+
+/* Hide scrollbar completely when no active dropdowns */
+.services::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* PERFECTLY FITTED Process Step Cards - EXACT HEIGHT CALCULATION */
+.border2 {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  
+  /* CRITICAL: Perfect fit - each card takes exactly 1/5 of available height */
+  flex: 1;
+  height: calc((100% - 3rem) / 5); /* Reduced from 4rem to 3rem for tighter fit */
+  min-height: calc((100% - 3rem) / 5);
+  max-height: calc((100% - 3rem) / 5);
+  margin-bottom: 0.75rem; /* Reduced margin */
+}
+
+/* Remove margin from last card to prevent overflow */
+.border2:last-child {
+  margin-bottom: 0;
+}
+
+.border2:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(104, 209, 223, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.border2.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(104, 209, 223, 0.3);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  
+  /* CRITICAL: When active, expand beyond normal height */
+  height: auto !important;
+  min-height: calc((100% - 3rem) / 5) !important;
+  max-height: none !important;
+  flex: none !important;
+  overflow: visible !important;
+  
+  /* Keep margin for spacing when expanded */
+  margin-bottom: 0.75rem;
+}
+
+/* FIXED Step Header */
+.heading-2-button1 {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  gap: 1rem;
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+}
+
+/* FIXED Step Number */
+.empty-service-name {
+  height: auto;
+  width: auto;
+  min-width: 50px;
+  position: relative;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-cyan-64);
+  background: rgba(104, 209, 223, 0.1);
+  border: 1px solid rgba(104, 209, 223, 0.3);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.border2:hover .empty-service-name {
+  background: rgba(104, 209, 223, 0.15);
+  border-color: rgba(104, 209, 223, 0.4);
+  transform: scale(1.05);
+}
+
+.border2.active .empty-service-name {
+  background: rgba(104, 209, 223, 0.2);
+  border-color: rgba(104, 209, 223, 0.5);
+  transform: scale(1.1);
+}
+
+.rectangle1 {
+  display: none;
+}
+
+/* FIXED Step Content */
+.empty-service-description {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-7xl);
+  flex: 1;
+  flex-shrink: 0;
+}
+
+.digital-marketing-parent {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.digital-marketing2 {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-weight: 600;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--color-cyan-64);
+  transition: all 0.3s ease;
+}
+
+.border2:hover .digital-marketing2 {
+  transform: translateX(5px);
+}
+
+.border2.active .digital-marketing2 {
+  transform: translateX(5px);
+}
+
+/* COMPLETELY FIXED Expandable Content */
+.what-its-crafting {
+  width: 100%;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-family: var(--font-inter);
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  
+  /* CRITICAL: Initial hidden state */
+  display: none;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  
+  /* CRITICAL: Smooth transitions */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* CRITICAL: Proper positioning */
+  position: relative;
+  z-index: 4;
+  
+  /* Styling */
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0;
+  background: rgba(104, 209, 223, 0.03);
+  border-left: 2px solid rgba(104, 209, 223, 0.2);
+  border-radius: 0 0 0.5rem 0;
+  margin: 0.5rem 0 0 1rem;
+  
+  /* CRITICAL: Ensure content is accessible */
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  /* CRITICAL: Allow proper expansion */
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* CRITICAL: Active state for expandable content */
+.border2.active .what-its-crafting {
+  display: block !important;
+  height: auto !important;
+  opacity: 1 !important;
+  padding: 1.5rem !important;
+  color: rgba(255, 255, 255, 0.95);
+  border-left-color: rgba(104, 209, 223, 0.4);
+  background: rgba(104, 209, 223, 0.05);
+  
+  /* CRITICAL: Ensure full visibility */
+  visibility: visible;
+  overflow: visible;
+  max-height: none;
+  min-height: auto;
+  
+  /* CRITICAL: Proper spacing */
+  margin: 1rem 0 1rem 1rem;
+}
+
+/* Text Styling Classes */
+.our-digital-services-container1 {
+  width: 100%;
+}
+
+.turning {
+  font-weight: 300;
+}
+
+.agile {
+  font-weight: 700;
+  color: var(--color-cyan-64);
+}
+
+.span {
+  color: var(--color-cyan-64);
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(104, 209, 223, 0.4);
+  position: relative;
+}
+
+
+
+@keyframes underlineGlow {
+  0% { opacity: 0.6; transform: scaleX(1); }
+  100% { opacity: 0.8; transform: scaleX(1.05); }
+}
+
+/* Simple Animation Classes */
+.development-container {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: simpleReveal 1s ease-out 0.2s forwards;
+}
+
+@keyframes simpleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.border2 {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease;
+}
+
+.border2.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.border2:nth-child(1) { transition-delay: 0.1s; }
+.border2:nth-child(2) { transition-delay: 0.2s; }
+.border2:nth-child(3) { transition-delay: 0.3s; }
+.border2:nth-child(4) { transition-delay: 0.4s; }
+.border2:nth-child(5) { transition-delay: 0.5s; }
+
+/* CRITICAL: Ensure click events work properly */
+.border2 {
+  pointer-events: auto !important;
+  user-select: none;
+}
+
+.border2 * {
+  pointer-events: none !important;
+}
+
+/* CRITICAL: Override any height restrictions */
+.border2.active {
+  height: auto !important;
+  max-height: none !important;
+  min-height: auto !important;
+}
+
+.border2.active .what-its-crafting {
+  height: auto !important;
+  max-height: none !important;
+  min-height: auto !important;
+}
+
+/* CRITICAL: Smooth scroll to active element */
+.border2.active {
+  scroll-margin-top: 1rem;
+}
+
+/* ENHANCED MOBILE RESPONSIVE DESIGN - COMPLETELY REDESIGNED */
+@media screen and (max-width: 1200px) {
+  .development {
+    padding: 1.5rem;
+    height: auto; /* Changed from 100vh to auto */
+    min-height: auto; /* Changed from 100vh to auto */
+    max-height: none; /* Remove height restriction */
+  }
+  
+  .development-container {
+    flex-direction: column;
+    gap: 2rem;
+    max-height: none; /* Remove height restriction */
+    height: auto; /* Changed to auto */
+  }
+  
+  .development-content {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    height: auto; /* Changed to auto */
+    flex-shrink: 0;
+  }
+  
+  .development-approach {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .our-agile-container {
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    text-align: center;
+  }
+  
+  .combining-agile-development {
+    text-align: center;
+    border-left: none;
+    border-top: 3px solid rgba(104, 209, 223, 0.3);
+    border-radius: 1rem;
+  }
+  
+  .services {
+    max-width: 100%;
+    height: auto; /* Changed to auto */
+    max-height: none; /* Remove height restriction */
+    flex: none; /* Changed from 1 to none */
+    overflow-y: visible; /* Changed to visible */
+  }
+  
+  .mission-style-process {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+  
+  .success-story-heading::before,
+  .success-story-heading::after {
+    display: none;
+  }
+  
+  /* Reset card heights for tablet */
+  .border2 {
+    flex: none; /* Changed from 1 to none */
+    height: auto; /* Changed to auto */
+    min-height: auto; /* Changed to auto */
+    max-height: none; /* Remove restriction */
+    margin-bottom: 1rem; /* Increased margin */
+  }
+  
+  .border2.active {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    flex: none !important;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .development {
+    padding: 1rem;
+    height: auto; /* MOBILE: Auto height */
+    min-height: auto; /* MOBILE: Auto min-height */
+    max-height: none; /* MOBILE: No max height */
+  }
+  
+  .development-container {
+    gap: 1.5rem;
+    max-height: none; /* Remove height restriction */
+    height: auto; /* Auto height */
+  }
+  
+  .services {
+    max-height: none; /* Remove height restriction */
+    height: auto; /* Auto height */
+    padding: 1.2rem;
+    overflow-y: visible; /* Always visible */
+  }
+  
+  .mission-style-process {
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+  }
+  
+  .at-athkado-our-container {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+  }
+  
+  .to-be-your-container {
+    font-size: 1rem;
+    padding: 1.2rem;
+    border-left: none;
+    border-top: 3px solid rgba(104, 209, 223, 0.3);
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  .heading-26 {
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .mask-group-icon3 {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+  
+  /* MOBILE: All cards auto height */
+  .border2 {
+    flex: none;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    margin-bottom: 1rem;
+  }
+  
+  .border2.active {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    flex: none !important;
+    margin-bottom: 1rem;
+  }
+  
+  .heading-2-button1 {
+    padding: 0.8rem 1rem;
+    gap: 0.8rem;
+  }
+  
+  .empty-service-name {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1rem;
+  }
+  
+  .digital-marketing2 {
+    font-size: 1.1rem;
+  }
+  
+  .what-its-crafting {
+    font-size: 0.9rem;
+    margin-left: 0.8rem;
+  }
+  
+  .border2.active .what-its-crafting {
+    padding: 1.2rem !important;
+    margin: 0.8rem 0 0.8rem 0.8rem;
+  }
+  
+  .our-agile-container {
+    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+  }
+  
+  .combining-agile-development {
+    font-size: 0.9rem;
+    padding: 1.2rem;
+  }
+  
+  .heading-28 {
+    font-size: 0.9rem;
+    letter-spacing: 0.12rem;
+  }
+  
+  .mask-group-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .development {
+    padding: 0.8rem;
+    height: auto; /* SMALL MOBILE: Auto height */
+    min-height: auto; /* SMALL MOBILE: Auto min-height */
+    max-height: none; /* SMALL MOBILE: No max height */
+  }
+  
+  .development-container {
+    max-height: none; /* Remove height restriction */
+    height: auto; /* Auto height */
+  }
+  
+  .services {
+    padding: 1rem;
+    gap: 0; /* Remove gap */
+    border-radius: 1rem;
+    max-height: none; /* Remove height restriction */
+    height: auto; /* Auto height */
+    overflow-y: visible; /* Always visible */
+  }
+  
+  .mission-style-process {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  
+  .at-athkado-our-container {
+    font-size: clamp(1.5rem, 2.8vw, 2rem);
+  }
+  
+  .to-be-your-container {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+  
+  .heading-26 {
+    font-size: 0.7rem;
+    letter-spacing: 0.15rem;
+  }
+  
+  .mask-group-icon3 {
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  /* SMALL MOBILE: All cards auto height */
+  .border2 {
+    flex: none;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    margin-bottom: 0.8rem;
+  }
+  
+  .border2.active {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    flex: none !important;
+    margin-bottom: 0.8rem;
+  }
+  
+  .heading-2-button1 {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  
+  .empty-service-name {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .digital-marketing2 {
+    font-size: 1rem;
+  }
+  
+  .what-its-crafting {
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+  }
+  
+  .border2.active .what-its-crafting {
+    padding: 1rem !important;
+    margin: 0.8rem 0 0.8rem 0.5rem;
+  }
+  
+  .our-agile-container {
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  }
+  
+  .combining-agile-development {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+  
+  .heading-28 {
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .mask-group-icon {
+    height: 1rem;
+    width: 1rem;
+  }
+}
+
+/* Accessibility */
+.border2:focus {
+  outline: 2px solid var(--color-cyan-64);
+  outline-offset: 2px;
+}
+
+.border2:focus-visible {
+  outline: 2px solid var(--color-cyan-64);
+  outline-offset: 2px;
+}
+
+.mission-style-process:focus-within {
+  outline: 2px solid var(--color-cyan-64);
+  outline-offset: 2px;
+}
+
+/* Performance optimizations */
+.border2 {
+  contain: none;
+  will-change: transform;
+}
+
+.mission-style-process {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .border2,
+  .empty-service-name,
+  .digital-marketing2,
+  .what-its-crafting,
+  .mask-group-icon,
+  .mask-group-icon3,
+  .mission-style-process {
+    transition: none;
+    animation: none !important;
+  }
+  
+  .border2:hover,
+  .border2.active {
+    transform: none !important;
+  }
+  
+  .border2:hover .empty-service-name,
+  .border2.active .empty-service-name,
+  .border2:hover .digital-marketing2,
+  .border2.active .digital-marketing2 {
+    transform: none !important;
+  }
+  
+  .mission-style-process:hover {
+    transform: none !important;
+  }
+  
+  .services {
+    scroll-behavior: auto;
+  }
+}
+
+/* CRITICAL: Force proper height behavior on mobile */
+@media screen and (max-width: 768px) {
+  .border2.active {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+
+  .border2.active .what-its-crafting {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* CRITICAL: Ensure scrollbar is never forced on mobile */
+@media screen and (max-width: 768px) {
+  .services {
+    scrollbar-gutter: auto;
+    overflow: visible;
+  }
+  
+  .services.has-active-dropdown {
+    overflow-y: visible;
+  }
+}
